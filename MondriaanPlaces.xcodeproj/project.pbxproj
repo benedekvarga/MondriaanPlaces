@@ -11,6 +11,7 @@
 		0D2E63EA242FA8DF0070205C /* Objektiv-Mk2-W03-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0D2E63E8242FA8DF0070205C /* Objektiv-Mk2-W03-Regular.ttf */; };
 		0D2E63EB242FA8DF0070205C /* Objektiv-Mk2-W03-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0D2E63E9242FA8DF0070205C /* Objektiv-Mk2-W03-Bold.ttf */; };
 		0D2E63ED242FA9200070205C /* AppFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2E63EC242FA9200070205C /* AppFonts.swift */; };
+		0D2E63F1242FAB820070205C /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2E63F0242FAB820070205C /* Place.swift */; };
 		0D311831242F657E00D81FC7 /* AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D311830242F657E00D81FC7 /* AppColors.swift */; };
 		0D31183D242F663100D81FC7 /* PrimitiveSequence+Exts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D311833242F663100D81FC7 /* PrimitiveSequence+Exts.swift */; };
 		0D31183E242F663100D81FC7 /* UIView+Exts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D311834242F663100D81FC7 /* UIView+Exts.swift */; };
@@ -52,6 +53,7 @@
 		0D2E63E8242FA8DF0070205C /* Objektiv-Mk2-W03-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Objektiv-Mk2-W03-Regular.ttf"; sourceTree = "<group>"; };
 		0D2E63E9242FA8DF0070205C /* Objektiv-Mk2-W03-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Objektiv-Mk2-W03-Bold.ttf"; sourceTree = "<group>"; };
 		0D2E63EC242FA9200070205C /* AppFonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFonts.swift; sourceTree = "<group>"; };
+		0D2E63F0242FAB820070205C /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
 		0D311830242F657E00D81FC7 /* AppColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColors.swift; sourceTree = "<group>"; };
 		0D311833242F663100D81FC7 /* PrimitiveSequence+Exts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PrimitiveSequence+Exts.swift"; sourceTree = "<group>"; };
 		0D311834242F663100D81FC7 /* UIView+Exts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Exts.swift"; sourceTree = "<group>"; };
@@ -121,6 +123,21 @@
 				0D2E63E8242FA8DF0070205C /* Objektiv-Mk2-W03-Regular.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		0D2E63EE242FAB550070205C /* PlacesList */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = PlacesList;
+			sourceTree = "<group>";
+		};
+		0D2E63EF242FAB740070205C /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				0D2E63F0242FAB820070205C /* Place.swift */,
+			);
+			path = Entities;
 			sourceTree = "<group>";
 		};
 		0D31182F242F654E00D81FC7 /* LayoutConfigurations */ = {
@@ -225,6 +242,7 @@
 		0DE8B824242F5400008B9C4C /* AppModules */ = {
 			isa = PBXGroup;
 			children = (
+				0D2E63EE242FAB550070205C /* PlacesList */,
 				0DE8B825242F5407008B9C4C /* MondriaanPlacesCore */,
 			);
 			path = AppModules;
@@ -233,6 +251,7 @@
 		0DE8B825242F5407008B9C4C /* MondriaanPlacesCore */ = {
 			isa = PBXGroup;
 			children = (
+				0D2E63EF242FAB740070205C /* Entities */,
 				0D31182F242F654E00D81FC7 /* LayoutConfigurations */,
 			);
 			path = MondriaanPlacesCore;
@@ -458,6 +477,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D2E63F1242FAB820070205C /* Place.swift in Sources */,
 				0D311846242F663100D81FC7 /* NumberFormatter+Exts.swift in Sources */,
 				0D311844242F663100D81FC7 /* UIColor+Exts.swift in Sources */,
 				0D311843242F663100D81FC7 /* Double+Exts.swift in Sources */,
