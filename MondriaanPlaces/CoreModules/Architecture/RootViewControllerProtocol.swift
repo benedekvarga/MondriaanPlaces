@@ -7,8 +7,9 @@
 
 import UIKit
 
-protocol RootViewControllerProtocol {
+protocol RootViewControllerProtocol: class {
     var rootViewModel: RootViewModelProtocol { get }
+    var viewController: UIViewController { get }
 
     func createView() -> UIView
     func initializeView()

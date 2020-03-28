@@ -21,6 +21,9 @@
 		0D2E6401242FB1140070205C /* PlaceDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2E6400242FB1140070205C /* PlaceDetailsViewController.swift */; };
 		0D2E6403242FB1210070205C /* PlaceDetailsViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2E6402242FB1210070205C /* PlaceDetailsViewModelProtocol.swift */; };
 		0D2E6405242FB12A0070205C /* PlaceDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2E6404242FB12A0070205C /* PlaceDetailsViewModel.swift */; };
+		0D2E6408242FB2810070205C /* DependencyInjection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2E6407242FB2810070205C /* DependencyInjection.swift */; };
+		0D2E640A242FB5AD0070205C /* PlaceListViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2E6409242FB5AD0070205C /* PlaceListViewControllerProtocol.swift */; };
+		0D2E640C242FB60C0070205C /* PlaceDetailsViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2E640B242FB60C0070205C /* PlaceDetailsViewControllerProtocol.swift */; };
 		0D311831242F657E00D81FC7 /* AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D311830242F657E00D81FC7 /* AppColors.swift */; };
 		0D31183D242F663100D81FC7 /* PrimitiveSequence+Exts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D311833242F663100D81FC7 /* PrimitiveSequence+Exts.swift */; };
 		0D31183E242F663100D81FC7 /* UIView+Exts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D311834242F663100D81FC7 /* UIView+Exts.swift */; };
@@ -72,6 +75,9 @@
 		0D2E6400242FB1140070205C /* PlaceDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceDetailsViewController.swift; sourceTree = "<group>"; };
 		0D2E6402242FB1210070205C /* PlaceDetailsViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceDetailsViewModelProtocol.swift; sourceTree = "<group>"; };
 		0D2E6404242FB12A0070205C /* PlaceDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceDetailsViewModel.swift; sourceTree = "<group>"; };
+		0D2E6407242FB2810070205C /* DependencyInjection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyInjection.swift; sourceTree = "<group>"; };
+		0D2E6409242FB5AD0070205C /* PlaceListViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceListViewControllerProtocol.swift; sourceTree = "<group>"; };
+		0D2E640B242FB60C0070205C /* PlaceDetailsViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceDetailsViewControllerProtocol.swift; sourceTree = "<group>"; };
 		0D311830242F657E00D81FC7 /* AppColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColors.swift; sourceTree = "<group>"; };
 		0D311833242F663100D81FC7 /* PrimitiveSequence+Exts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PrimitiveSequence+Exts.swift"; sourceTree = "<group>"; };
 		0D311834242F663100D81FC7 /* UIView+Exts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Exts.swift"; sourceTree = "<group>"; };
@@ -147,6 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				0D2E63F8242FAECD0070205C /* PlaceListItem */,
+				0D2E6409242FB5AD0070205C /* PlaceListViewControllerProtocol.swift */,
 				0D2E63F2242FAE1A0070205C /* PlaceListViewController.swift */,
 				0D2E63F4242FAE310070205C /* PlaceListViewModelProtocol.swift */,
 				0D2E63F6242FAE3B0070205C /* PlaceListViewModel.swift */,
@@ -175,11 +182,20 @@
 		0D2E63FF242FB0F60070205C /* PlaceDetails */ = {
 			isa = PBXGroup;
 			children = (
+				0D2E640B242FB60C0070205C /* PlaceDetailsViewControllerProtocol.swift */,
 				0D2E6400242FB1140070205C /* PlaceDetailsViewController.swift */,
 				0D2E6402242FB1210070205C /* PlaceDetailsViewModelProtocol.swift */,
 				0D2E6404242FB12A0070205C /* PlaceDetailsViewModel.swift */,
 			);
 			path = PlaceDetails;
+			sourceTree = "<group>";
+		};
+		0D2E6406242FB2630070205C /* DependencyInjection */ = {
+			isa = PBXGroup;
+			children = (
+				0D2E6407242FB2810070205C /* DependencyInjection.swift */,
+			);
+			path = DependencyInjection;
 			sourceTree = "<group>";
 		};
 		0D31182F242F654E00D81FC7 /* LayoutConfigurations */ = {
@@ -222,10 +238,10 @@
 			isa = PBXGroup;
 			children = (
 				0D31184D242F66E500D81FC7 /* RootTableViewCell.swift */,
-				0D311851242F66E500D81FC7 /* RootViewController.swift */,
 				0D31184E242F66E500D81FC7 /* RootViewControllerProtocol.swift */,
-				0D31184F242F66E500D81FC7 /* RootViewModel.swift */,
+				0D311851242F66E500D81FC7 /* RootViewController.swift */,
 				0D311850242F66E500D81FC7 /* RootViewModelProtocol.swift */,
+				0D31184F242F66E500D81FC7 /* RootViewModel.swift */,
 			);
 			path = Architecture;
 			sourceTree = "<group>";
@@ -294,6 +310,7 @@
 		0DE8B825242F5407008B9C4C /* MondriaanPlacesCore */ = {
 			isa = PBXGroup;
 			children = (
+				0D2E6406242FB2630070205C /* DependencyInjection */,
 				0D2E63EF242FAB740070205C /* Entities */,
 				0D31182F242F654E00D81FC7 /* LayoutConfigurations */,
 			);
@@ -525,6 +542,7 @@
 				0D311846242F663100D81FC7 /* NumberFormatter+Exts.swift in Sources */,
 				0D311844242F663100D81FC7 /* UIColor+Exts.swift in Sources */,
 				0D311843242F663100D81FC7 /* Double+Exts.swift in Sources */,
+				0D2E640C242FB60C0070205C /* PlaceDetailsViewControllerProtocol.swift in Sources */,
 				0D31183D242F663100D81FC7 /* PrimitiveSequence+Exts.swift in Sources */,
 				0D2E6401242FB1140070205C /* PlaceDetailsViewController.swift in Sources */,
 				0DE8B802242F53C6008B9C4C /* AppDelegate.swift in Sources */,
@@ -550,8 +568,10 @@
 				0D2E63FC242FAEF20070205C /* PlaceListItemViewModel.swift in Sources */,
 				0D311831242F657E00D81FC7 /* AppColors.swift in Sources */,
 				0D311853242F66E500D81FC7 /* RootViewControllerProtocol.swift in Sources */,
+				0D2E640A242FB5AD0070205C /* PlaceListViewControllerProtocol.swift in Sources */,
 				0D311854242F66E500D81FC7 /* RootViewModel.swift in Sources */,
 				0D311840242F663100D81FC7 /* String+Exts.swift in Sources */,
+				0D2E6408242FB2810070205C /* DependencyInjection.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

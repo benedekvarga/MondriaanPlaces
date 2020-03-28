@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PlaceDetailsViewController: RootViewController {
+class PlaceDetailsViewController: RootViewController, PlaceDetailsViewControllerProtocol {
     // MARK: - Properties
 
     var viewModel: PlaceDetailsViewModelProtocol {

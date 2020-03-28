@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PlaceListViewController: RootViewController {
+class PlaceListViewController: RootViewController, PlaceListViewControllerProtocol {
     // MARK: - Properties
 
     var viewModel: PlaceListViewModelProtocol {

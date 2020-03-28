@@ -14,8 +14,8 @@ class RootViewController: UIViewController, RootViewControllerProtocol {
     var rootViewModel: RootViewModelProtocol
     let disposeBag = DisposeBag()
 
-    override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .lightContent
+    var viewController: UIViewController {
+        return self
     }
 
     // MARK: - Initialization
@@ -59,6 +59,8 @@ class RootViewController: UIViewController, RootViewControllerProtocol {
 
     /// Setup view properties independent from `viewModel`, for example title, backgroundColor
     public func initializeView() {
+        view.backgroundColor = .white
+
         setupView()
         bindViewModel()
     }
