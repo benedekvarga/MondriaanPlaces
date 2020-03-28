@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "0DE8B7FD242F53C6008B9C4C"
-               BuildableName = "MDC Helyek.app"
+               BuildableName = "MondriaanPlaces.app"
                BlueprintName = "MondriaanPlaces"
                ReferencedContainer = "container:MondriaanPlaces.xcodeproj">
             </BuildableReference>
@@ -47,7 +47,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "0DE8B7FD242F53C6008B9C4C"
-            BuildableName = "MDC Helyek.app"
+            BuildableName = "MondriaanPlaces.app"
             BlueprintName = "MondriaanPlaces"
             ReferencedContainer = "container:MondriaanPlaces.xcodeproj">
          </BuildableReference>
@@ -64,7 +64,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "0DE8B7FD242F53C6008B9C4C"
-            BuildableName = "MDC Helyek.app"
+            BuildableName = "MondriaanPlaces.app"
             BlueprintName = "MondriaanPlaces"
             ReferencedContainer = "container:MondriaanPlaces.xcodeproj">
          </BuildableReference>
