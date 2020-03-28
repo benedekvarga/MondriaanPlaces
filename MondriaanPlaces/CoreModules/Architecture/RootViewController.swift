@@ -57,7 +57,7 @@ class RootViewController: UIViewController, RootViewControllerProtocol {
         return UIView()
     }
 
-    /// Setup view properties independent from `viewModel`, for example title, backgroundColor
+    /// Setup view properties independent from `viewModel`, for example title, backgroundColor, etc.
     public func initializeView() {
         view.backgroundColor = .white
 

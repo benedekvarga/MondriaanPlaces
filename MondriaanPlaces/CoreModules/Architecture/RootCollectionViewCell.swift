@@ -1,7 +1,7 @@
 //
-//  RootTableViewCell.swift
+//  RootCollectionViewCell.swift
 //
-//  Created by Benedek Varga on 2020. 03. 26..
+//  Created by Benedek Varga on 2020. 03. 28..
 //  Copyright © 2020. Benedek Varga. All rights reserved.
 //
 
@@ -9,7 +9,7 @@ import RxSwift
 import SnapKit
 import UIKit
 
-class RootTableViewCell: UITableViewCell {
+class RootCollectionViewCell: UICollectionViewCell {
     // MARK: - Properties
 
     public var customContentView: UIView = {
@@ -23,8 +23,8 @@ class RootTableViewCell: UITableViewCell {
 
     // MARK: - Initialization
 
-    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
-        super.init(style: style, reuseIdentifier: reuseIdentifier)
+    override init(frame: CGRect) {
+        super.init(frame: frame)
 
         createView()
         initializeView()
