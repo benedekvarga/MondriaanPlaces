@@ -3,15 +3,38 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D2E63DA242FA6370070205C /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2E63D9242FA6370070205C /* NetworkError.swift */; };
+		0D2E63EA242FA8DF0070205C /* Objektiv-Mk2-W03-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0D2E63E8242FA8DF0070205C /* Objektiv-Mk2-W03-Regular.ttf */; };
+		0D2E63EB242FA8DF0070205C /* Objektiv-Mk2-W03-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0D2E63E9242FA8DF0070205C /* Objektiv-Mk2-W03-Bold.ttf */; };
+		0D2E63ED242FA9200070205C /* AppFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2E63EC242FA9200070205C /* AppFonts.swift */; };
+		0D311831242F657E00D81FC7 /* AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D311830242F657E00D81FC7 /* AppColors.swift */; };
+		0D31183D242F663100D81FC7 /* PrimitiveSequence+Exts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D311833242F663100D81FC7 /* PrimitiveSequence+Exts.swift */; };
+		0D31183E242F663100D81FC7 /* UIView+Exts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D311834242F663100D81FC7 /* UIView+Exts.swift */; };
+		0D31183F242F663100D81FC7 /* Reachability+Exts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D311835242F663100D81FC7 /* Reachability+Exts.swift */; };
+		0D311840242F663100D81FC7 /* String+Exts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D311836242F663100D81FC7 /* String+Exts.swift */; };
+		0D311841242F663100D81FC7 /* CAGradientLayer+Exts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D311837242F663100D81FC7 /* CAGradientLayer+Exts.swift */; };
+		0D311842242F663100D81FC7 /* Int+Exts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D311838242F663100D81FC7 /* Int+Exts.swift */; };
+		0D311843242F663100D81FC7 /* Double+Exts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D311839242F663100D81FC7 /* Double+Exts.swift */; };
+		0D311844242F663100D81FC7 /* UIColor+Exts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D31183A242F663100D81FC7 /* UIColor+Exts.swift */; };
+		0D311845242F663100D81FC7 /* CGFloat+Exts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D31183B242F663100D81FC7 /* CGFloat+Exts.swift */; };
+		0D311846242F663100D81FC7 /* NumberFormatter+Exts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D31183C242F663100D81FC7 /* NumberFormatter+Exts.swift */; };
+		0D31184A242F668000D81FC7 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D311848242F668000D81FC7 /* Logger.swift */; };
+		0D31184B242F668000D81FC7 /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D311849242F668000D81FC7 /* ReusableView.swift */; };
+		0D311852242F66E500D81FC7 /* RootTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D31184D242F66E500D81FC7 /* RootTableViewCell.swift */; };
+		0D311853242F66E500D81FC7 /* RootViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D31184E242F66E500D81FC7 /* RootViewControllerProtocol.swift */; };
+		0D311854242F66E500D81FC7 /* RootViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D31184F242F66E500D81FC7 /* RootViewModel.swift */; };
+		0D311855242F66E500D81FC7 /* RootViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D311850242F66E500D81FC7 /* RootViewModelProtocol.swift */; };
+		0D311856242F66E500D81FC7 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D311851242F66E500D81FC7 /* RootViewController.swift */; };
 		0DE8B802242F53C6008B9C4C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE8B801242F53C6008B9C4C /* AppDelegate.swift */; };
 		0DE8B804242F53C6008B9C4C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE8B803242F53C6008B9C4C /* SceneDelegate.swift */; };
 		0DE8B80B242F53C7008B9C4C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0DE8B80A242F53C7008B9C4C /* Assets.xcassets */; };
 		0DE8B80E242F53C7008B9C4C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DE8B80C242F53C7008B9C4C /* LaunchScreen.storyboard */; };
 		0DE8B819242F53C8008B9C4C /* MondriaanPlacesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE8B818242F53C8008B9C4C /* MondriaanPlacesTests.swift */; };
+		681D7A35FF6676F13BF19841 /* Pods_MondriaanPlaces.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BA78AB64381B296EAFFE1B8 /* Pods_MondriaanPlaces.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,6 +48,28 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0D2E63D9242FA6370070205C /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		0D2E63E8242FA8DF0070205C /* Objektiv-Mk2-W03-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Objektiv-Mk2-W03-Regular.ttf"; sourceTree = "<group>"; };
+		0D2E63E9242FA8DF0070205C /* Objektiv-Mk2-W03-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Objektiv-Mk2-W03-Bold.ttf"; sourceTree = "<group>"; };
+		0D2E63EC242FA9200070205C /* AppFonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFonts.swift; sourceTree = "<group>"; };
+		0D311830242F657E00D81FC7 /* AppColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColors.swift; sourceTree = "<group>"; };
+		0D311833242F663100D81FC7 /* PrimitiveSequence+Exts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PrimitiveSequence+Exts.swift"; sourceTree = "<group>"; };
+		0D311834242F663100D81FC7 /* UIView+Exts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Exts.swift"; sourceTree = "<group>"; };
+		0D311835242F663100D81FC7 /* Reachability+Exts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Reachability+Exts.swift"; sourceTree = "<group>"; };
+		0D311836242F663100D81FC7 /* String+Exts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Exts.swift"; sourceTree = "<group>"; };
+		0D311837242F663100D81FC7 /* CAGradientLayer+Exts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CAGradientLayer+Exts.swift"; sourceTree = "<group>"; };
+		0D311838242F663100D81FC7 /* Int+Exts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Int+Exts.swift"; sourceTree = "<group>"; };
+		0D311839242F663100D81FC7 /* Double+Exts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Double+Exts.swift"; sourceTree = "<group>"; };
+		0D31183A242F663100D81FC7 /* UIColor+Exts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Exts.swift"; sourceTree = "<group>"; };
+		0D31183B242F663100D81FC7 /* CGFloat+Exts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGFloat+Exts.swift"; sourceTree = "<group>"; };
+		0D31183C242F663100D81FC7 /* NumberFormatter+Exts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NumberFormatter+Exts.swift"; sourceTree = "<group>"; };
+		0D311848242F668000D81FC7 /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		0D311849242F668000D81FC7 /* ReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
+		0D31184D242F66E500D81FC7 /* RootTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootTableViewCell.swift; sourceTree = "<group>"; };
+		0D31184E242F66E500D81FC7 /* RootViewControllerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewControllerProtocol.swift; sourceTree = "<group>"; };
+		0D31184F242F66E500D81FC7 /* RootViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewModel.swift; sourceTree = "<group>"; };
+		0D311850242F66E500D81FC7 /* RootViewModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewModelProtocol.swift; sourceTree = "<group>"; };
+		0D311851242F66E500D81FC7 /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		0DAD0CC9242F5C7F001F76D3 /* hu */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hu; path = hu.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		0DE8B7FE242F53C6008B9C4C /* MondriaanPlaces.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MondriaanPlaces.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DE8B801242F53C6008B9C4C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -35,6 +80,10 @@
 		0DE8B814242F53C8008B9C4C /* MondriaanPlacesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MondriaanPlacesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DE8B818242F53C8008B9C4C /* MondriaanPlacesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MondriaanPlacesTests.swift; sourceTree = "<group>"; };
 		0DE8B81A242F53C8008B9C4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5C9582ED666BF8F626A9D5A4 /* Pods-MondriaanPlaces.dev.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MondriaanPlaces.dev.xcconfig"; path = "Target Support Files/Pods-MondriaanPlaces/Pods-MondriaanPlaces.dev.xcconfig"; sourceTree = "<group>"; };
+		6BA78AB64381B296EAFFE1B8 /* Pods_MondriaanPlaces.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MondriaanPlaces.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		92D39E38E772220A0058831B /* Pods-MondriaanPlaces.hungarian.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MondriaanPlaces.hungarian.xcconfig"; path = "Target Support Files/Pods-MondriaanPlaces/Pods-MondriaanPlaces.hungarian.xcconfig"; sourceTree = "<group>"; };
+		C4D791D2E254A302536E40C7 /* Pods-MondriaanPlaces.english.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MondriaanPlaces.english.xcconfig"; path = "Target Support Files/Pods-MondriaanPlaces/Pods-MondriaanPlaces.english.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				681D7A35FF6676F13BF19841 /* Pods_MondriaanPlaces.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -55,12 +105,80 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0D2E63E6242FA8BF0070205C /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				0DE8B80C242F53C7008B9C4C /* LaunchScreen.storyboard */,
+				0DE8B80A242F53C7008B9C4C /* Assets.xcassets */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		0D2E63E7242FA8C80070205C /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				0D2E63E9242FA8DF0070205C /* Objektiv-Mk2-W03-Bold.ttf */,
+				0D2E63E8242FA8DF0070205C /* Objektiv-Mk2-W03-Regular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		0D31182F242F654E00D81FC7 /* LayoutConfigurations */ = {
+			isa = PBXGroup;
+			children = (
+				0D311830242F657E00D81FC7 /* AppColors.swift */,
+				0D2E63EC242FA9200070205C /* AppFonts.swift */,
+			);
+			path = LayoutConfigurations;
+			sourceTree = "<group>";
+		};
+		0D311832242F65DF00D81FC7 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				0D311837242F663100D81FC7 /* CAGradientLayer+Exts.swift */,
+				0D31183B242F663100D81FC7 /* CGFloat+Exts.swift */,
+				0D311839242F663100D81FC7 /* Double+Exts.swift */,
+				0D311838242F663100D81FC7 /* Int+Exts.swift */,
+				0D31183C242F663100D81FC7 /* NumberFormatter+Exts.swift */,
+				0D311833242F663100D81FC7 /* PrimitiveSequence+Exts.swift */,
+				0D311835242F663100D81FC7 /* Reachability+Exts.swift */,
+				0D311836242F663100D81FC7 /* String+Exts.swift */,
+				0D31183A242F663100D81FC7 /* UIColor+Exts.swift */,
+				0D311834242F663100D81FC7 /* UIView+Exts.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		0D311847242F666600D81FC7 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				0D311848242F668000D81FC7 /* Logger.swift */,
+				0D2E63D9242FA6370070205C /* NetworkError.swift */,
+				0D311849242F668000D81FC7 /* ReusableView.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		0D31184C242F66D000D81FC7 /* Architecture */ = {
+			isa = PBXGroup;
+			children = (
+				0D31184D242F66E500D81FC7 /* RootTableViewCell.swift */,
+				0D311851242F66E500D81FC7 /* RootViewController.swift */,
+				0D31184E242F66E500D81FC7 /* RootViewControllerProtocol.swift */,
+				0D31184F242F66E500D81FC7 /* RootViewModel.swift */,
+				0D311850242F66E500D81FC7 /* RootViewModelProtocol.swift */,
+			);
+			path = Architecture;
+			sourceTree = "<group>";
+		};
 		0DE8B7F5242F53C6008B9C4C = {
 			isa = PBXGroup;
 			children = (
 				0DE8B800242F53C6008B9C4C /* MondriaanPlaces */,
 				0DE8B817242F53C8008B9C4C /* MondriaanPlacesTests */,
 				0DE8B7FF242F53C6008B9C4C /* Products */,
+				DBACDC0EE4684E58FBB8272A /* Pods */,
+				781BE4C172DBEBD196AEA3AC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,6 +215,9 @@
 		0DE8B823242F53F8008B9C4C /* CoreModules */ = {
 			isa = PBXGroup;
 			children = (
+				0D31184C242F66D000D81FC7 /* Architecture */,
+				0D311832242F65DF00D81FC7 /* Extensions */,
+				0D311847242F666600D81FC7 /* Utility */,
 			);
 			path = CoreModules;
 			sourceTree = "<group>";
@@ -112,6 +233,7 @@
 		0DE8B825242F5407008B9C4C /* MondriaanPlacesCore */ = {
 			isa = PBXGroup;
 			children = (
+				0D31182F242F654E00D81FC7 /* LayoutConfigurations */,
 			);
 			path = MondriaanPlacesCore;
 			sourceTree = "<group>";
@@ -128,10 +250,28 @@
 		0DE8B828242F563A008B9C4C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				0DE8B80A242F53C7008B9C4C /* Assets.xcassets */,
-				0DE8B80C242F53C7008B9C4C /* LaunchScreen.storyboard */,
+				0D2E63E7242FA8C80070205C /* Fonts */,
+				0D2E63E6242FA8BF0070205C /* Images */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		781BE4C172DBEBD196AEA3AC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6BA78AB64381B296EAFFE1B8 /* Pods_MondriaanPlaces.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DBACDC0EE4684E58FBB8272A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5C9582ED666BF8F626A9D5A4 /* Pods-MondriaanPlaces.dev.xcconfig */,
+				C4D791D2E254A302536E40C7 /* Pods-MondriaanPlaces.english.xcconfig */,
+				92D39E38E772220A0058831B /* Pods-MondriaanPlaces.hungarian.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,10 +281,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0DE8B81D242F53C8008B9C4C /* Build configuration list for PBXNativeTarget "MondriaanPlaces" */;
 			buildPhases = (
+				7DF77C841EF7611E8056D7EA /* [CP] Check Pods Manifest.lock */,
 				0DE8B826242F54CC008B9C4C /* Linter */,
 				0DE8B7FA242F53C6008B9C4C /* Sources */,
 				0DE8B7FB242F53C6008B9C4C /* Frameworks */,
 				0DE8B7FC242F53C6008B9C4C /* Resources */,
+				FF89979F1B1106B705247B71 /* [CP] Embed Pods Frameworks */,
+				A8075A882F2B7A0F7C3772EA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -218,7 +361,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				0DE8B80E242F53C7008B9C4C /* LaunchScreen.storyboard in Resources */,
+				0D2E63EA242FA8DF0070205C /* Objektiv-Mk2-W03-Regular.ttf in Resources */,
 				0DE8B80B242F53C7008B9C4C /* Assets.xcassets in Resources */,
+				0D2E63EB242FA8DF0070205C /* Objektiv-Mk2-W03-Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,6 +395,62 @@
 			shellPath = /bin/sh;
 			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
+		7DF77C841EF7611E8056D7EA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MondriaanPlaces-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A8075A882F2B7A0F7C3772EA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MondriaanPlaces/Pods-MondriaanPlaces-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MondriaanPlaces/Pods-MondriaanPlaces-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MondriaanPlaces/Pods-MondriaanPlaces-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FF89979F1B1106B705247B71 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MondriaanPlaces/Pods-MondriaanPlaces-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MondriaanPlaces/Pods-MondriaanPlaces-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MondriaanPlaces/Pods-MondriaanPlaces-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -257,8 +458,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D311846242F663100D81FC7 /* NumberFormatter+Exts.swift in Sources */,
+				0D311844242F663100D81FC7 /* UIColor+Exts.swift in Sources */,
+				0D311843242F663100D81FC7 /* Double+Exts.swift in Sources */,
+				0D31183D242F663100D81FC7 /* PrimitiveSequence+Exts.swift in Sources */,
 				0DE8B802242F53C6008B9C4C /* AppDelegate.swift in Sources */,
+				0D31183F242F663100D81FC7 /* Reachability+Exts.swift in Sources */,
+				0D31184B242F668000D81FC7 /* ReusableView.swift in Sources */,
+				0D311841242F663100D81FC7 /* CAGradientLayer+Exts.swift in Sources */,
+				0D31183E242F663100D81FC7 /* UIView+Exts.swift in Sources */,
+				0D311855242F66E500D81FC7 /* RootViewModelProtocol.swift in Sources */,
+				0D311856242F66E500D81FC7 /* RootViewController.swift in Sources */,
+				0D311852242F66E500D81FC7 /* RootTableViewCell.swift in Sources */,
+				0D311842242F663100D81FC7 /* Int+Exts.swift in Sources */,
+				0D311845242F663100D81FC7 /* CGFloat+Exts.swift in Sources */,
 				0DE8B804242F53C6008B9C4C /* SceneDelegate.swift in Sources */,
+				0D2E63DA242FA6370070205C /* NetworkError.swift in Sources */,
+				0D2E63ED242FA9200070205C /* AppFonts.swift in Sources */,
+				0D31184A242F668000D81FC7 /* Logger.swift in Sources */,
+				0D311831242F657E00D81FC7 /* AppColors.swift in Sources */,
+				0D311853242F66E500D81FC7 /* RootViewControllerProtocol.swift in Sources */,
+				0D311854242F66E500D81FC7 /* RootViewModel.swift in Sources */,
+				0D311840242F663100D81FC7 /* String+Exts.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -350,6 +571,7 @@
 		};
 		0DAD0CCB242F5FD7001F76D3 /* Hungarian */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 92D39E38E772220A0058831B /* Pods-MondriaanPlaces.hungarian.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -507,6 +729,7 @@
 		};
 		0DE8B81E242F53C8008B9C4C /* Dev */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5C9582ED666BF8F626A9D5A4 /* Pods-MondriaanPlaces.dev.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -526,6 +749,7 @@
 		};
 		0DE8B81F242F53C8008B9C4C /* English */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C4D791D2E254A302536E40C7 /* Pods-MondriaanPlaces.english.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
