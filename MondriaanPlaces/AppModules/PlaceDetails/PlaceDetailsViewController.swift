@@ -1,5 +1,5 @@
 //
-//  PlaceListViewController.swift
+//  PlaceDetailsViewController.swift
 //  MondriaanPlaces
 //
 //  Created by Benedek Varga on 2020. 03. 28..
@@ -8,11 +8,11 @@
 
 import UIKit
 
-class PlaceListViewController: RootViewController {
+class PlaceDetailsViewController: RootViewController {
     // MARK: - Properties
 
-    var viewModel: PlaceListViewModelProtocol {
-        return rootViewModel as! PlaceListViewModelProtocol
+    var viewModel: PlaceDetailsViewModelProtocol {
+        return rootViewModel as! PlaceDetailsViewModelProtocol
     }
 
     // MARK: - RootViewController functions
