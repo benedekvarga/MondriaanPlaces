@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0D05F682242FF6B30059EA52 /* RootCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D05F681242FF6B30059EA52 /* RootCollectionViewCell.swift */; };
+		0D05F68A243009B80059EA52 /* Localized.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0D05F68C243009B80059EA52 /* Localized.strings */; };
 		0D2E63DA242FA6370070205C /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2E63D9242FA6370070205C /* NetworkError.swift */; };
 		0D2E63EA242FA8DF0070205C /* Objektiv-Mk2-W03-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0D2E63E8242FA8DF0070205C /* Objektiv-Mk2-W03-Regular.ttf */; };
 		0D2E63EB242FA8DF0070205C /* Objektiv-Mk2-W03-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0D2E63E9242FA8DF0070205C /* Objektiv-Mk2-W03-Bold.ttf */; };
@@ -63,6 +64,8 @@
 
 /* Begin PBXFileReference section */
 		0D05F681242FF6B30059EA52 /* RootCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootCollectionViewCell.swift; sourceTree = "<group>"; };
+		0D05F68B243009B80059EA52 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localized.strings; sourceTree = "<group>"; };
+		0D05F68D243009BB0059EA52 /* hu */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hu; path = hu.lproj/Localized.strings; sourceTree = "<group>"; };
 		0D2E63D9242FA6370070205C /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		0D2E63E8242FA8DF0070205C /* Objektiv-Mk2-W03-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Objektiv-Mk2-W03-Regular.ttf"; sourceTree = "<group>"; };
 		0D2E63E9242FA8DF0070205C /* Objektiv-Mk2-W03-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Objektiv-Mk2-W03-Bold.ttf"; sourceTree = "<group>"; };
@@ -133,6 +136,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0D05F687243009920059EA52 /* Strings */ = {
+			isa = PBXGroup;
+			children = (
+				0D05F68C243009B80059EA52 /* Localized.strings */,
+			);
+			path = Strings;
+			sourceTree = "<group>";
+		};
 		0D2E63E6242FA8BF0070205C /* Images */ = {
 			isa = PBXGroup;
 			children = (
@@ -334,6 +345,7 @@
 			children = (
 				0D2E63E7242FA8C80070205C /* Fonts */,
 				0D2E63E6242FA8BF0070205C /* Images */,
+				0D05F687243009920059EA52 /* Strings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -444,6 +456,7 @@
 			files = (
 				0DE8B80E242F53C7008B9C4C /* LaunchScreen.storyboard in Resources */,
 				0D2E63EA242FA8DF0070205C /* Objektiv-Mk2-W03-Regular.ttf in Resources */,
+				0D05F68A243009B80059EA52 /* Localized.strings in Resources */,
 				0DE8B80B242F53C7008B9C4C /* Assets.xcassets in Resources */,
 				0D2E63EB242FA8DF0070205C /* Objektiv-Mk2-W03-Bold.ttf in Resources */,
 			);
@@ -598,6 +611,15 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		0D05F68C243009B80059EA52 /* Localized.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0D05F68B243009B80059EA52 /* en */,
+				0D05F68D243009BB0059EA52 /* hu */,
+			);
+			name = Localized.strings;
+			sourceTree = "<group>";
+		};
 		0DE8B80C242F53C7008B9C4C /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

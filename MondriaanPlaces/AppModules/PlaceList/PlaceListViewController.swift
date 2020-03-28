@@ -25,6 +25,17 @@ class PlaceListViewController: RootViewController, PlaceListViewControllerProtoc
 
     override func initializeView() {
         super.initializeView()
+
+        // Navigation Bar
+
+        let logoImageView = UIImageView(image: UIImage(named: "mondriaanLogo".localized))
+        debugLog("mondriaanLogo".localized)
+        logoImageView.contentMode = .scaleAspectFill
+        let imageItem = UIBarButtonItem(customView: logoImageView)
+        navigationItem.leftBarButtonItem = imageItem
+        navigationController?.navigationBar.isTranslucent = false
+        navigationController?.navigationBar.tintColor = .white
+        navigationController?.navigationBar.shadowImage = UIImage()
     }
 
     override func setupViewConstraints() {
