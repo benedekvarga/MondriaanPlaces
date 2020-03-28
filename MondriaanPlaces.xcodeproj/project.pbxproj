@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		0DE8B802242F53C6008B9C4C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE8B801242F53C6008B9C4C /* AppDelegate.swift */; };
 		0DE8B804242F53C6008B9C4C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE8B803242F53C6008B9C4C /* SceneDelegate.swift */; };
-		0DE8B806242F53C6008B9C4C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE8B805242F53C6008B9C4C /* ViewController.swift */; };
-		0DE8B809242F53C6008B9C4C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DE8B807242F53C6008B9C4C /* Main.storyboard */; };
 		0DE8B80B242F53C7008B9C4C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0DE8B80A242F53C7008B9C4C /* Assets.xcassets */; };
 		0DE8B80E242F53C7008B9C4C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DE8B80C242F53C7008B9C4C /* LaunchScreen.storyboard */; };
 		0DE8B819242F53C8008B9C4C /* MondriaanPlacesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE8B818242F53C8008B9C4C /* MondriaanPlacesTests.swift */; };
@@ -30,8 +28,6 @@
 		0DE8B7FE242F53C6008B9C4C /* MondriaanPlaces.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MondriaanPlaces.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DE8B801242F53C6008B9C4C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0DE8B803242F53C6008B9C4C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		0DE8B805242F53C6008B9C4C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		0DE8B808242F53C6008B9C4C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0DE8B80A242F53C7008B9C4C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0DE8B80D242F53C7008B9C4C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0DE8B80F242F53C7008B9C4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -79,13 +75,11 @@
 		0DE8B800242F53C6008B9C4C /* MondriaanPlaces */ = {
 			isa = PBXGroup;
 			children = (
-				0DE8B801242F53C6008B9C4C /* AppDelegate.swift */,
-				0DE8B803242F53C6008B9C4C /* SceneDelegate.swift */,
-				0DE8B805242F53C6008B9C4C /* ViewController.swift */,
-				0DE8B807242F53C6008B9C4C /* Main.storyboard */,
-				0DE8B80A242F53C7008B9C4C /* Assets.xcassets */,
-				0DE8B80C242F53C7008B9C4C /* LaunchScreen.storyboard */,
 				0DE8B80F242F53C7008B9C4C /* Info.plist */,
+				0DE8B827242F5624008B9C4C /* Main */,
+				0DE8B824242F5400008B9C4C /* AppModules */,
+				0DE8B823242F53F8008B9C4C /* CoreModules */,
+				0DE8B828242F563A008B9C4C /* Resources */,
 			);
 			path = MondriaanPlaces;
 			sourceTree = "<group>";
@@ -99,6 +93,46 @@
 			path = MondriaanPlacesTests;
 			sourceTree = "<group>";
 		};
+		0DE8B823242F53F8008B9C4C /* CoreModules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CoreModules;
+			sourceTree = "<group>";
+		};
+		0DE8B824242F5400008B9C4C /* AppModules */ = {
+			isa = PBXGroup;
+			children = (
+				0DE8B825242F5407008B9C4C /* MondriaanPlacesCore */,
+			);
+			path = AppModules;
+			sourceTree = "<group>";
+		};
+		0DE8B825242F5407008B9C4C /* MondriaanPlacesCore */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = MondriaanPlacesCore;
+			sourceTree = "<group>";
+		};
+		0DE8B827242F5624008B9C4C /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				0DE8B801242F53C6008B9C4C /* AppDelegate.swift */,
+				0DE8B803242F53C6008B9C4C /* SceneDelegate.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		0DE8B828242F563A008B9C4C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0DE8B80A242F53C7008B9C4C /* Assets.xcassets */,
+				0DE8B80C242F53C7008B9C4C /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -106,6 +140,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0DE8B81D242F53C8008B9C4C /* Build configuration list for PBXNativeTarget "MondriaanPlaces" */;
 			buildPhases = (
+				0DE8B826242F54CC008B9C4C /* Linter */,
 				0DE8B7FA242F53C6008B9C4C /* Sources */,
 				0DE8B7FB242F53C6008B9C4C /* Frameworks */,
 				0DE8B7FC242F53C6008B9C4C /* Resources */,
@@ -182,7 +217,6 @@
 			files = (
 				0DE8B80E242F53C7008B9C4C /* LaunchScreen.storyboard in Resources */,
 				0DE8B80B242F53C7008B9C4C /* Assets.xcassets in Resources */,
-				0DE8B809242F53C6008B9C4C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -195,12 +229,32 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0DE8B826242F54CC008B9C4C /* Linter */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Linter;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		0DE8B7FA242F53C6008B9C4C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0DE8B806242F53C6008B9C4C /* ViewController.swift in Sources */,
 				0DE8B802242F53C6008B9C4C /* AppDelegate.swift in Sources */,
 				0DE8B804242F53C6008B9C4C /* SceneDelegate.swift in Sources */,
 			);
@@ -225,14 +279,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		0DE8B807242F53C6008B9C4C /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				0DE8B808242F53C6008B9C4C /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		0DE8B80C242F53C7008B9C4C /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -365,6 +411,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Q6H3BX95WZ;
 				INFOPLIST_FILE = MondriaanPlaces/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -372,7 +419,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.benedekvarga.MondriaanPlaces;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -383,6 +430,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Q6H3BX95WZ;
 				INFOPLIST_FILE = MondriaanPlaces/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -390,7 +438,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.benedekvarga.MondriaanPlaces;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
