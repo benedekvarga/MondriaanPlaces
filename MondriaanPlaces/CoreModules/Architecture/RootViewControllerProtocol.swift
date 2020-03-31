@@ -14,5 +14,6 @@ protocol RootViewControllerProtocol: class {
     func createView() -> UIView
     func initializeView()
     func setupViewConstraints()
+    func setupView()
     func bindViewModel()
 }

@@ -10,8 +10,6 @@
 		0D05F682242FF6B30059EA52 /* RootCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D05F681242FF6B30059EA52 /* RootCollectionViewCell.swift */; };
 		0D05F68A243009B80059EA52 /* Localized.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0D05F68C243009B80059EA52 /* Localized.strings */; };
 		0D2E63DA242FA6370070205C /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2E63D9242FA6370070205C /* NetworkError.swift */; };
-		0D2E63EA242FA8DF0070205C /* Objektiv-Mk2-W03-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0D2E63E8242FA8DF0070205C /* Objektiv-Mk2-W03-Regular.ttf */; };
-		0D2E63EB242FA8DF0070205C /* Objektiv-Mk2-W03-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0D2E63E9242FA8DF0070205C /* Objektiv-Mk2-W03-Bold.ttf */; };
 		0D2E63ED242FA9200070205C /* AppFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2E63EC242FA9200070205C /* AppFonts.swift */; };
 		0D2E63F1242FAB820070205C /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2E63F0242FAB820070205C /* Place.swift */; };
 		0D2E63F3242FAE1A0070205C /* PlaceListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2E63F2242FAE1A0070205C /* PlaceListViewController.swift */; };
@@ -44,6 +42,16 @@
 		0D311854242F66E500D81FC7 /* RootViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D31184F242F66E500D81FC7 /* RootViewModel.swift */; };
 		0D311855242F66E500D81FC7 /* RootViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D311850242F66E500D81FC7 /* RootViewModelProtocol.swift */; };
 		0D311856242F66E500D81FC7 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D311851242F66E500D81FC7 /* RootViewController.swift */; };
+		0D3AC2B62430C13300853AD8 /* SectionHeaderViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D3AC2B52430C13300853AD8 /* SectionHeaderViewModelProtocol.swift */; };
+		0D3AC2B82430C14B00853AD8 /* SectionHeaderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D3AC2B72430C14B00853AD8 /* SectionHeaderViewModel.swift */; };
+		0D3AC2BA2430C1B400853AD8 /* SectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D3AC2B92430C1B400853AD8 /* SectionHeaderView.swift */; };
+		0D3AC2BE2430E8D800853AD8 /* RootInputModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D3AC2BD2430E8D800853AD8 /* RootInputModelProtocol.swift */; };
+		0D3AC2C22430ED5F00853AD8 /* SectionHeaderInputModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D3AC2C12430ED5F00853AD8 /* SectionHeaderInputModelProtocol.swift */; };
+		0D3AC2C42430ED8900853AD8 /* SectionHeaderInputModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D3AC2C32430ED8900853AD8 /* SectionHeaderInputModel.swift */; };
+		0D3AC2C62430F48100853AD8 /* PlaceListItemInputModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D3AC2C52430F48100853AD8 /* PlaceListItemInputModel.swift */; };
+		0D3AC2C82430F49000853AD8 /* PlaceListItemInputModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D3AC2C72430F49000853AD8 /* PlaceListItemInputModelProtocol.swift */; };
+		0D3AC2C92431F02A00853AD8 /* Objektiv-Mk2-W03-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0D2E63E9242FA8DF0070205C /* Objektiv-Mk2-W03-Bold.ttf */; };
+		0D3AC2CA2431F02E00853AD8 /* Objektiv-Mk2-W03-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0D2E63E8242FA8DF0070205C /* Objektiv-Mk2-W03-Regular.ttf */; };
 		0DE8B802242F53C6008B9C4C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE8B801242F53C6008B9C4C /* AppDelegate.swift */; };
 		0DE8B804242F53C6008B9C4C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE8B803242F53C6008B9C4C /* SceneDelegate.swift */; };
 		0DE8B80B242F53C7008B9C4C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0DE8B80A242F53C7008B9C4C /* Assets.xcassets */; };
@@ -101,6 +109,14 @@
 		0D31184F242F66E500D81FC7 /* RootViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewModel.swift; sourceTree = "<group>"; };
 		0D311850242F66E500D81FC7 /* RootViewModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewModelProtocol.swift; sourceTree = "<group>"; };
 		0D311851242F66E500D81FC7 /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		0D3AC2B52430C13300853AD8 /* SectionHeaderViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeaderViewModelProtocol.swift; sourceTree = "<group>"; };
+		0D3AC2B72430C14B00853AD8 /* SectionHeaderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeaderViewModel.swift; sourceTree = "<group>"; };
+		0D3AC2B92430C1B400853AD8 /* SectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeaderView.swift; sourceTree = "<group>"; };
+		0D3AC2BD2430E8D800853AD8 /* RootInputModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootInputModelProtocol.swift; sourceTree = "<group>"; };
+		0D3AC2C12430ED5F00853AD8 /* SectionHeaderInputModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeaderInputModelProtocol.swift; sourceTree = "<group>"; };
+		0D3AC2C32430ED8900853AD8 /* SectionHeaderInputModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeaderInputModel.swift; sourceTree = "<group>"; };
+		0D3AC2C52430F48100853AD8 /* PlaceListItemInputModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceListItemInputModel.swift; sourceTree = "<group>"; };
+		0D3AC2C72430F49000853AD8 /* PlaceListItemInputModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceListItemInputModelProtocol.swift; sourceTree = "<group>"; };
 		0DAD0CC9242F5C7F001F76D3 /* hu */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hu; path = hu.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		0DE8B7FE242F53C6008B9C4C /* MondriaanPlaces.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MondriaanPlaces.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DE8B801242F53C6008B9C4C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -165,6 +181,7 @@
 		0D2E63EE242FAB550070205C /* PlaceList */ = {
 			isa = PBXGroup;
 			children = (
+				0D3AC2B42430C10E00853AD8 /* SectionHeader */,
 				0D2E63F8242FAECD0070205C /* PlaceListItem */,
 				0D2E6409242FB5AD0070205C /* PlaceListViewControllerProtocol.swift */,
 				0D2E63F2242FAE1A0070205C /* PlaceListViewController.swift */,
@@ -188,6 +205,8 @@
 				0D2E63FD242FAF0D0070205C /* PlaceListItemCollectionViewCell.swift */,
 				0D2E63F9242FAEE30070205C /* PlaceListItemViewModelProtocol.swift */,
 				0D2E63FB242FAEF20070205C /* PlaceListItemViewModel.swift */,
+				0D3AC2C72430F49000853AD8 /* PlaceListItemInputModelProtocol.swift */,
+				0D3AC2C52430F48100853AD8 /* PlaceListItemInputModel.swift */,
 			);
 			path = PlaceListItem;
 			sourceTree = "<group>";
@@ -256,8 +275,21 @@
 				0D311851242F66E500D81FC7 /* RootViewController.swift */,
 				0D311850242F66E500D81FC7 /* RootViewModelProtocol.swift */,
 				0D31184F242F66E500D81FC7 /* RootViewModel.swift */,
+				0D3AC2BD2430E8D800853AD8 /* RootInputModelProtocol.swift */,
 			);
 			path = Architecture;
+			sourceTree = "<group>";
+		};
+		0D3AC2B42430C10E00853AD8 /* SectionHeader */ = {
+			isa = PBXGroup;
+			children = (
+				0D3AC2B92430C1B400853AD8 /* SectionHeaderView.swift */,
+				0D3AC2B52430C13300853AD8 /* SectionHeaderViewModelProtocol.swift */,
+				0D3AC2B72430C14B00853AD8 /* SectionHeaderViewModel.swift */,
+				0D3AC2C12430ED5F00853AD8 /* SectionHeaderInputModelProtocol.swift */,
+				0D3AC2C32430ED8900853AD8 /* SectionHeaderInputModel.swift */,
+			);
+			path = SectionHeader;
 			sourceTree = "<group>";
 		};
 		0DE8B7F5242F53C6008B9C4C = {
@@ -454,11 +486,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D3AC2C92431F02A00853AD8 /* Objektiv-Mk2-W03-Bold.ttf in Resources */,
 				0DE8B80E242F53C7008B9C4C /* LaunchScreen.storyboard in Resources */,
-				0D2E63EA242FA8DF0070205C /* Objektiv-Mk2-W03-Regular.ttf in Resources */,
 				0D05F68A243009B80059EA52 /* Localized.strings in Resources */,
+				0D3AC2CA2431F02E00853AD8 /* Objektiv-Mk2-W03-Regular.ttf in Resources */,
 				0DE8B80B242F53C7008B9C4C /* Assets.xcassets in Resources */,
-				0D2E63EB242FA8DF0070205C /* Objektiv-Mk2-W03-Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -555,8 +587,12 @@
 			files = (
 				0D2E63F3242FAE1A0070205C /* PlaceListViewController.swift in Sources */,
 				0D2E63F1242FAB820070205C /* Place.swift in Sources */,
+				0D3AC2C42430ED8900853AD8 /* SectionHeaderInputModel.swift in Sources */,
 				0D311846242F663100D81FC7 /* NumberFormatter+Exts.swift in Sources */,
 				0D311844242F663100D81FC7 /* UIColor+Exts.swift in Sources */,
+				0D3AC2B62430C13300853AD8 /* SectionHeaderViewModelProtocol.swift in Sources */,
+				0D3AC2B82430C14B00853AD8 /* SectionHeaderViewModel.swift in Sources */,
+				0D3AC2C22430ED5F00853AD8 /* SectionHeaderInputModelProtocol.swift in Sources */,
 				0D311843242F663100D81FC7 /* Double+Exts.swift in Sources */,
 				0D2E640C242FB60C0070205C /* PlaceDetailsViewControllerProtocol.swift in Sources */,
 				0D31183D242F663100D81FC7 /* PrimitiveSequence+Exts.swift in Sources */,
@@ -568,6 +604,7 @@
 				0D2E63F7242FAE3B0070205C /* PlaceListViewModel.swift in Sources */,
 				0D2E63FA242FAEE30070205C /* PlaceListItemViewModelProtocol.swift in Sources */,
 				0D2E6405242FB12A0070205C /* PlaceDetailsViewModel.swift in Sources */,
+				0D3AC2BE2430E8D800853AD8 /* RootInputModelProtocol.swift in Sources */,
 				0D311841242F663100D81FC7 /* CAGradientLayer+Exts.swift in Sources */,
 				0D31183E242F663100D81FC7 /* UIView+Exts.swift in Sources */,
 				0D311855242F66E500D81FC7 /* RootViewModelProtocol.swift in Sources */,
@@ -579,12 +616,15 @@
 				0D311845242F663100D81FC7 /* CGFloat+Exts.swift in Sources */,
 				0DE8B804242F53C6008B9C4C /* SceneDelegate.swift in Sources */,
 				0D2E63DA242FA6370070205C /* NetworkError.swift in Sources */,
+				0D3AC2C62430F48100853AD8 /* PlaceListItemInputModel.swift in Sources */,
+				0D3AC2BA2430C1B400853AD8 /* SectionHeaderView.swift in Sources */,
 				0D2E63ED242FA9200070205C /* AppFonts.swift in Sources */,
 				0D2E6403242FB1210070205C /* PlaceDetailsViewModelProtocol.swift in Sources */,
 				0D31184A242F668000D81FC7 /* Logger.swift in Sources */,
 				0D2E63FC242FAEF20070205C /* PlaceListItemViewModel.swift in Sources */,
 				0D311831242F657E00D81FC7 /* AppColors.swift in Sources */,
 				0D311853242F66E500D81FC7 /* RootViewControllerProtocol.swift in Sources */,
+				0D3AC2C82430F49000853AD8 /* PlaceListItemInputModelProtocol.swift in Sources */,
 				0D2E640A242FB5AD0070205C /* PlaceListViewControllerProtocol.swift in Sources */,
 				0D311854242F66E500D81FC7 /* RootViewModel.swift in Sources */,
 				0D311840242F663100D81FC7 /* String+Exts.swift in Sources */,

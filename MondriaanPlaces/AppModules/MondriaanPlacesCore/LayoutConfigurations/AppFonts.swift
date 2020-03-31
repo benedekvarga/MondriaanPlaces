@@ -12,10 +12,10 @@ extension UIFont {
     // MARK: - Objektiv Mk2
 
     class func objektivMk2Bold(ofSize size: CGFloat) -> UIFont {
-        return UIFont(name: "Objektiv-Mk2-W03-Bold", size: size)!
+        return UIFont(name: "ObjektivMk2W03-Bold", size: size)!
     }
 
     class func objektivMk2Regular(ofSize size: CGFloat) -> UIFont {
-        return UIFont(name: "Objektiv-Mk2-W03-Regular", size: size)!
+        return UIFont(name: "ObjektivMk2W03-Regular", size: size)!
     }
 }

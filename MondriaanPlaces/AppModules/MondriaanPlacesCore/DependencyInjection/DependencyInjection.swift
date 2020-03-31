@@ -29,8 +29,8 @@ class DependencyInjection {
             return PlaceListViewModel()
         }
 
-        container.register(PlaceDetailsViewModelProtocol.self) { _ in
-            return PlaceDetailsViewModel()
+        container.register(PlaceDetailsViewModelProtocol.self) { (_, inputModel: RootInputModelProtocol) in
+            return PlaceDetailsViewModel(inputView: inputModel)
         }
 
         // MARK: - ViewControllers
@@ -53,7 +53,8 @@ class DependencyInjection {
     }
 
     private func resolvePlaceDetailsViewModel() -> PlaceDetailsViewModelProtocol {
-        let viewModel = container.resolve(PlaceDetailsViewModelProtocol.self)!
+        let inputModel: RootInputModelProtocol? = nil
+        let viewModel = container.resolve(PlaceDetailsViewModelProtocol.self, argument: inputModel)!
 
         return viewModel
     }

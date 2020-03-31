@@ -42,6 +42,7 @@ class RootViewController: UIViewController, RootViewControllerProtocol {
         super.viewDidLoad()
 
         initializeView()
+        view.setNeedsUpdateConstraints()
     }
 
     override func updateViewConstraints() {

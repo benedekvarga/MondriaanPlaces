@@ -14,9 +14,14 @@ public class RootViewModel: RootViewModelProtocol {
 
     // MARK: - Initialization
 
+    public init(inputView: RootInputModelProtocol) {
+        initializeViewModel()
+    }
     public init() {
         initializeViewModel()
     }
+
+    // MARK: - RootViewModelProtocol functions
 
     func initializeViewModel() { }
 }

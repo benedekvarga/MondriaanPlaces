@@ -9,4 +9,6 @@
 import RxSwift
 
 protocol PlaceListViewModelProtocol: RootViewModelProtocol {
+    var places: BehaviorSubject<[[PlaceListItemViewModelProtocol]]> { get }
+    var sectionHeaders: [SectionHeaderViewModelProtocol] { get }
 }
