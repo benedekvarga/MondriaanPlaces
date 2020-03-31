@@ -39,4 +39,3 @@ final class RxProvider<T: TargetType & Providing> {
             })
     }
 }
-

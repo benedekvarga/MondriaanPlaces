@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0D05F682242FF6B30059EA52 /* RootCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D05F681242FF6B30059EA52 /* RootCollectionViewCell.swift */; };
 		0D05F68A243009B80059EA52 /* Localized.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0D05F68C243009B80059EA52 /* Localized.strings */; };
+		0D13FE8A2433E858001EE87F /* CLLocationCoordinate2D+Exts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D13FE892433E858001EE87F /* CLLocationCoordinate2D+Exts.swift */; };
 		0D2E63ED242FA9200070205C /* AppFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2E63EC242FA9200070205C /* AppFonts.swift */; };
 		0D2E63F1242FAB820070205C /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2E63F0242FAB820070205C /* Place.swift */; };
 		0D2E63F3242FAE1A0070205C /* PlaceListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2E63F2242FAE1A0070205C /* PlaceListViewController.swift */; };
@@ -59,6 +60,8 @@
 		0D8C0FA72433C10900C3F8A1 /* Rubik-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0D8C0FA42433C10900C3F8A1 /* Rubik-Bold.ttf */; };
 		0D8C0FA82433C10900C3F8A1 /* Rubik-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0D8C0FA52433C10900C3F8A1 /* Rubik-Italic.ttf */; };
 		0D8C0FA92433C10900C3F8A1 /* Rubik-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0D8C0FA62433C10900C3F8A1 /* Rubik-Regular.ttf */; };
+		0D8C0FB62433CBA400C3F8A1 /* PlaceDetailsInputModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8C0FB52433CBA400C3F8A1 /* PlaceDetailsInputModelProtocol.swift */; };
+		0D8C0FB82433CBB900C3F8A1 /* PlaceDetailsInputModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8C0FB72433CBB900C3F8A1 /* PlaceDetailsInputModel.swift */; };
 		0DE8B802242F53C6008B9C4C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE8B801242F53C6008B9C4C /* AppDelegate.swift */; };
 		0DE8B804242F53C6008B9C4C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE8B803242F53C6008B9C4C /* SceneDelegate.swift */; };
 		0DE8B80B242F53C7008B9C4C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0DE8B80A242F53C7008B9C4C /* Assets.xcassets */; };
@@ -81,6 +84,7 @@
 		0D05F681242FF6B30059EA52 /* RootCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootCollectionViewCell.swift; sourceTree = "<group>"; };
 		0D05F68B243009B80059EA52 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localized.strings; sourceTree = "<group>"; };
 		0D05F68D243009BB0059EA52 /* hu */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hu; path = hu.lproj/Localized.strings; sourceTree = "<group>"; };
+		0D13FE892433E858001EE87F /* CLLocationCoordinate2D+Exts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CLLocationCoordinate2D+Exts.swift"; sourceTree = "<group>"; };
 		0D2E63EC242FA9200070205C /* AppFonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFonts.swift; sourceTree = "<group>"; };
 		0D2E63F0242FAB820070205C /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
 		0D2E63F2242FAE1A0070205C /* PlaceListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceListViewController.swift; sourceTree = "<group>"; };
@@ -131,6 +135,8 @@
 		0D8C0FA42433C10900C3F8A1 /* Rubik-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Bold.ttf"; sourceTree = "<group>"; };
 		0D8C0FA52433C10900C3F8A1 /* Rubik-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Italic.ttf"; sourceTree = "<group>"; };
 		0D8C0FA62433C10900C3F8A1 /* Rubik-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Regular.ttf"; sourceTree = "<group>"; };
+		0D8C0FB52433CBA400C3F8A1 /* PlaceDetailsInputModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceDetailsInputModelProtocol.swift; sourceTree = "<group>"; };
+		0D8C0FB72433CBB900C3F8A1 /* PlaceDetailsInputModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceDetailsInputModel.swift; sourceTree = "<group>"; };
 		0DAD0CC9242F5C7F001F76D3 /* hu */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hu; path = hu.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		0DE8B7FE242F53C6008B9C4C /* MondriaanPlaces.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MondriaanPlaces.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DE8B801242F53C6008B9C4C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -172,6 +178,14 @@
 				0D05F68C243009B80059EA52 /* Localized.strings */,
 			);
 			path = Strings;
+			sourceTree = "<group>";
+		};
+		0D13FE882433E842001EE87F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				0D13FE892433E858001EE87F /* CLLocationCoordinate2D+Exts.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		0D2E63E6242FA8BF0070205C /* Images */ = {
@@ -233,6 +247,8 @@
 				0D2E6400242FB1140070205C /* PlaceDetailsViewController.swift */,
 				0D2E6402242FB1210070205C /* PlaceDetailsViewModelProtocol.swift */,
 				0D2E6404242FB12A0070205C /* PlaceDetailsViewModel.swift */,
+				0D8C0FB52433CBA400C3F8A1 /* PlaceDetailsInputModelProtocol.swift */,
+				0D8C0FB72433CBB900C3F8A1 /* PlaceDetailsInputModel.swift */,
 			);
 			path = PlaceDetails;
 			sourceTree = "<group>";
@@ -401,6 +417,7 @@
 			children = (
 				0D2E6406242FB2630070205C /* DependencyInjection */,
 				0D2E63EF242FAB740070205C /* Entities */,
+				0D13FE882433E842001EE87F /* Extensions */,
 				0D31182F242F654E00D81FC7 /* LayoutConfigurations */,
 				0D6A14CF243374480088BF19 /* Networking */,
 				0D6A14DF243393F10088BF19 /* Services */,
@@ -646,6 +663,7 @@
 				0D2E6401242FB1140070205C /* PlaceDetailsViewController.swift in Sources */,
 				0DE8B802242F53C6008B9C4C /* AppDelegate.swift in Sources */,
 				0D6A14D8243376490088BF19 /* RunLoopThreadScheduler.swift in Sources */,
+				0D8C0FB82433CBB900C3F8A1 /* PlaceDetailsInputModel.swift in Sources */,
 				0D2E63F5242FAE310070205C /* PlaceListViewModelProtocol.swift in Sources */,
 				0D31183F242F663100D81FC7 /* Reachability+Exts.swift in Sources */,
 				0D31184B242F668000D81FC7 /* ReusableView.swift in Sources */,
@@ -669,6 +687,7 @@
 				0DE8B804242F53C6008B9C4C /* SceneDelegate.swift in Sources */,
 				0D3AC2C62430F48100853AD8 /* PlaceListItemInputModel.swift in Sources */,
 				0D3AC2BA2430C1B400853AD8 /* SectionHeaderView.swift in Sources */,
+				0D8C0FB62433CBA400C3F8A1 /* PlaceDetailsInputModelProtocol.swift in Sources */,
 				0D2E63ED242FA9200070205C /* AppFonts.swift in Sources */,
 				0D2E6403242FB1210070205C /* PlaceDetailsViewModelProtocol.swift in Sources */,
 				0D31184A242F668000D81FC7 /* Logger.swift in Sources */,
@@ -680,6 +699,7 @@
 				0D2E640A242FB5AD0070205C /* PlaceListViewControllerProtocol.swift in Sources */,
 				0D311854242F66E500D81FC7 /* RootViewModel.swift in Sources */,
 				0D311840242F663100D81FC7 /* String+Exts.swift in Sources */,
+				0D13FE8A2433E858001EE87F /* CLLocationCoordinate2D+Exts.swift in Sources */,
 				0D2E6408242FB2810070205C /* DependencyInjection.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

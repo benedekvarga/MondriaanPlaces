@@ -7,9 +7,16 @@
 //
 
 import UIKit
+import GoogleMaps
 
 class PlaceDetailsViewController: RootViewController, PlaceDetailsViewControllerProtocol {
     // MARK: - Properties
+
+    private lazy var mapView = GMSMapView().then {
+        $0.translatesAutoresizingMaskIntoConstraints = false
+    }
+
+    // MARK: - PlaceDetailsViewControllerProtocol properties
 
     var viewModel: PlaceDetailsViewModelProtocol {
         return rootViewModel as! PlaceDetailsViewModelProtocol
@@ -20,26 +27,47 @@ class PlaceDetailsViewController: RootViewController, PlaceDetailsViewController
     override func createView() -> UIView {
         let view = UIView()
 
+        view.addSubview(mapView)
+
         return view
     }
 
     override func initializeView() {
         super.initializeView()
+
+        title = viewModel.title
+
+        // Navigation Bar
+
+        self.navigationController?.navigationBar.titleTextAttributes = [
+            NSAttributedString.Key.foregroundColor: UIColor.mdcPurple,
+            NSAttributedString.Key.font: UIFont.rubikBold(ofSize: 22)
+        ]
     }
 
     override func setupViewConstraints() {
         super.setupViewConstraints()
+
+        mapView.snp.makeConstraints {
+            $0.edges.equalToSuperview()
+        }
     }
 
     override func setupView() {
         super.setupView()
-    }
 
-    override func bindViewModel() {
-        super.bindViewModel()
+        viewModel.pins.forEach { pin in
+            let marker = GMSMarker()
+            marker.position = pin.coordinates
+            marker.title = pin.name
+            marker.snippet = pin.city
+            marker.map = mapView
+        }
 
-        // MARK: - ViewController
+        // Position the view of map
 
-        // MARK: - ViewModel
+        let centerPoint = viewModel.pins.map { $0.coordinates }.center()
+        let camera = GMSCameraPosition.camera(withLatitude: centerPoint.latitude, longitude: centerPoint.longitude, zoom: 10.0)
+        mapView.camera = camera
     }
 }

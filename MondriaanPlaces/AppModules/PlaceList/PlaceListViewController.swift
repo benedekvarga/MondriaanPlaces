@@ -60,14 +60,16 @@ class PlaceListViewController: RootViewController, PlaceListViewControllerProtoc
             let headerViewModel = self.viewModel.sectionHeaders[indexPath.section]
             header.viewModel = headerViewModel
 
+            header.addTapGesture(handler: { _ in
+                let inputModel = headerViewModel.itemSelected()
+                let viewController = DependencyInjection.shared.resolveDetailsListViewController(with: inputModel).viewController
+                self.navigationController?.pushViewController(viewController, animated: true)
+            })
+
             return header
         })
 
     // MARK: - Properties
-
-    var viewModel: PlaceListViewModelProtocol {
-        return rootViewModel as! PlaceListViewModelProtocol
-    }
 
     private lazy var refreshButton = UIBarButtonItem(barButtonSystemItem: .refresh, target: self, action: nil).then {
         $0.tintColor = .black
@@ -103,6 +105,12 @@ class PlaceListViewController: RootViewController, PlaceListViewControllerProtoc
         $0.textAlignment = .center
         $0.numberOfLines = 0
         $0.isHidden = true
+    }
+
+    // MARK: - PlaceListViewControllerProtocol properties
+
+    var viewModel: PlaceListViewModelProtocol {
+        return rootViewModel as! PlaceListViewModelProtocol
     }
 
     // MARK: - RootViewController functions
@@ -168,7 +176,9 @@ class PlaceListViewController: RootViewController, PlaceListViewControllerProtoc
 
         placeListCollectionView.rx.modelSelected(PlaceListItemViewModel.self)
             .subscribe(onNext: { item in
-                item.itemSelected()
+                let inputModel = item.itemSelected()
+                let viewController = DependencyInjection.shared.resolveDetailsListViewController(with: inputModel).viewController
+                self.navigationController?.pushViewController(viewController, animated: true)
             })
             .disposed(by: disposeBag)
 

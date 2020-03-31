@@ -9,7 +9,7 @@ import Moya
 import RxSwift
 import SwiftyJSON
 
-extension PrimitiveSequence where TraitType == SingleTrait, ElementType == Response {
+extension PrimitiveSequence where Trait == SingleTrait, Element == Response {
     func mapSwiftyJSON() -> Single<JSON> {
         return flatMap { response -> Single<JSON> in
             Single.just(try JSON(data: response.data))

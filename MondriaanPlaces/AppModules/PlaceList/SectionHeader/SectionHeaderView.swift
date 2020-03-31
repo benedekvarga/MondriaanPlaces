@@ -94,9 +94,5 @@ class SectionHeaderView: UICollectionReusableView {
     private func setupView() {
         guard let viewModel = viewModel else { return }
         titleLabel.text = viewModel.title
-
-        self.addTapGesture(handler: { _ in
-            viewModel.onTap()
-        })
     }
 }

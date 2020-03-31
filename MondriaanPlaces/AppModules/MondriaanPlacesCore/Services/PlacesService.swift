@@ -36,8 +36,8 @@ struct PlacesService: PlacesServiceProtocol {
                         let address = item[ServerKey.address].string,
                         let imageUrl = item[ServerKey.imageUrl].string,
                         let description = item[ServerKey.description].string,
-                        let latitude = item[ServerKey.coordinates][ServerKey.longitude].double,
-                        let longitude = item[ServerKey.coordinates][ServerKey.latitude].double
+                        let latitude = item[ServerKey.coordinates][ServerKey.latitude].double,
+                        let longitude = item[ServerKey.coordinates][ServerKey.longitude].double
                     else {
                         errorLog("Cannot get place.")
                         return

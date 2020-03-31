@@ -45,8 +45,10 @@ class PlaceListViewModel: RootViewModel, PlaceListViewModelProtocol {
                 }
 
                 self.sectionHeaders = placesByCity.map { places in
-                    let inputModel = SectionHeaderInputModel(title: places.first?.city ?? "", onTap: {
-                        debugLog(places.map { $0.name })
+                    let inputModel = SectionHeaderInputModel(title: places.first?.city ?? "", itemSelected: {
+                        return PlaceDetailsInputModel(
+                            title: places.first?.city ?? "",
+                            pins: places.map { PinModel(name: $0.name, city: $0.city, coordinates: $0.coordinates) })
                     })
 
                     return SectionHeaderViewModel(inputView: inputModel)
@@ -60,7 +62,10 @@ class PlaceListViewModel: RootViewModel, PlaceListViewModelProtocol {
                             description: place.description,
                             imageUrl: place.imageUrl,
                             itemSelected: {
-                                debugLog(place)
+                                return PlaceDetailsInputModel(
+                                    title: place.name,
+                                    pins: [PinModel(name: place.name, city: place.city, coordinates: place.coordinates)]
+                                )
                             }
                         )
 
@@ -85,38 +90,5 @@ class PlaceListViewModel: RootViewModel, PlaceListViewModelProtocol {
                 self?.placesList.onNext(places)
             })
             .disposed(by: disposeBag)
-    }
-}
-
-// MARK: - Dummy data
-
-extension PlaceListViewModel {
-    private func populateDummyData() {
-        let dummyInputModel = PlaceListItemInputModel(
-            title: "Budapest",
-            subtitle: "Petőfi utca 11.",
-            description: "A Lorem Ipsum egy egyszerû szövegrészlete, szövegutánzata a betûszedõ és nyomdaiparnak. A Lorem Ipsum az 1500-as évek.",
-            imageUrl: "",
-            itemSelected: { debugLog("Budapest") }
-        )
-
-        let dummyPlaces: [PlaceListItemViewModelProtocol] = [
-            PlaceListItemViewModel(inputView: dummyInputModel),
-            PlaceListItemViewModel(inputView: dummyInputModel),
-            PlaceListItemViewModel(inputView: dummyInputModel),
-            PlaceListItemViewModel(inputView: dummyInputModel),
-            PlaceListItemViewModel(inputView: dummyInputModel),
-            PlaceListItemViewModel(inputView: dummyInputModel),
-            PlaceListItemViewModel(inputView: dummyInputModel),
-            PlaceListItemViewModel(inputView: dummyInputModel)
-        ]
-
-        let dummyHeaders = [
-            SectionHeaderViewModel(inputView: SectionHeaderInputModel(title: "Budapest", onTap: { debugLog("Budapest header tap") })),
-            SectionHeaderViewModel(inputView: SectionHeaderInputModel(title: "Stockholm", onTap: { debugLog("Stockhol header tap") }))
-        ]
-
-        places.onNext([dummyPlaces, dummyPlaces])
-        sectionHeaders = dummyHeaders
     }
 }

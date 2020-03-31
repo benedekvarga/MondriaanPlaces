@@ -9,4 +9,17 @@
 import RxSwift
 
 class PlaceDetailsViewModel: RootViewModel, PlaceDetailsViewModelProtocol {
+    // MARK: - PlaceDetailsViewModelProtocol properties
+
+    let title: String
+    let pins: [PinModel]
+
+    // MARK: - Initialization
+
+    init(inputView: PlaceDetailsInputModelProtocol) {
+        self.title = inputView.title
+        self.pins = inputView.pins
+
+        super.init()
+    }
 }

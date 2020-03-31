@@ -9,4 +9,6 @@
 import RxSwift
 
 protocol PlaceDetailsViewModelProtocol: RootViewModelProtocol {
+    var title: String { get }
+    var pins: [PinModel] { get }
 }

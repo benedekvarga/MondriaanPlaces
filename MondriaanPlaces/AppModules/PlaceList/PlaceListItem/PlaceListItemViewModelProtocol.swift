@@ -15,5 +15,5 @@ protocol PlaceListItemViewModelProtocol: RootViewModelProtocol {
     var subtitle: String { get }
     var description: String { get }
     var image: BehaviorSubject<UIImage> { get }
-    var itemSelected: (() -> Void) { get }
+    var itemSelected: (() -> PlaceDetailsInputModelProtocol) { get }
 }

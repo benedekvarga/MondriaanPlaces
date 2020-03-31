@@ -17,7 +17,7 @@ class PlaceListItemViewModel: RootViewModel, PlaceListItemViewModelProtocol {
     let subtitle: String
     var description: String
     let image = BehaviorSubject<UIImage>(value: #imageLiteral(resourceName: "photoPlacehoder"))
-    let itemSelected: (() -> Void)
+    let itemSelected: (() -> PlaceDetailsInputModelProtocol)
 
     // MARK: - Properties
 

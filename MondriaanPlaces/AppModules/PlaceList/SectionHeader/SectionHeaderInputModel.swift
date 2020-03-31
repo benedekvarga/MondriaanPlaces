@@ -10,5 +10,5 @@ struct SectionHeaderInputModel: SectionHeaderInputModelProtocol {
     // MARK: - Properties
 
     let title: String
-    var onTap: (() -> Void)
+    var itemSelected: (() -> PlaceDetailsInputModelProtocol)
 }

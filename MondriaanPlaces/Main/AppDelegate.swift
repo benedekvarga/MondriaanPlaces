@@ -6,6 +6,7 @@
 //  Copyright © 2020. Benedek Varga. All rights reserved.
 //
 
+import GoogleMaps
 import UIKit
 import Then
 
@@ -14,6 +15,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        // MARK: - Google API Key
+
+        GMSServices.provideAPIKey("AIzaSyAsHChBb3GpzfL4htCSlwGcEjlK3_u2szM")
+
         // MARK: - Dependency Injection
 
         DependencyInjection.shared.registerModules()

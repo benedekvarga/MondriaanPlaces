@@ -10,11 +10,13 @@ class SectionHeaderViewModel: RootViewModel, SectionHeaderViewModelProtocol {
     // MARK: - Properties
 
     let title: String
-    let onTap: (() -> Void)
+    let itemSelected: (() -> PlaceDetailsInputModelProtocol)
+
+    // MARK: - Initialization
 
     init(inputView: SectionHeaderInputModelProtocol) {
         self.title = inputView.title
-        self.onTap = inputView.onTap
+        self.itemSelected = inputView.itemSelected
 
         super.init()
     }

@@ -8,5 +8,5 @@
 
 protocol SectionHeaderInputModelProtocol: RootInputModelProtocol {
     var title: String { get }
-    var onTap: (() -> Void) { get }
+    var itemSelected: (() -> PlaceDetailsInputModelProtocol) { get }
 }
