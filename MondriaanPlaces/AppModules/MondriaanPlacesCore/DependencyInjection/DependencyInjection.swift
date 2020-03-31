@@ -23,10 +23,16 @@ class DependencyInjection {
     // MARK: - Functions
 
     func registerModules() {
-        // MARK: - ViewModel
+        // MARK: - Services
 
-        container.register(PlaceListViewModelProtocol.self) { _ in
-            return PlaceListViewModel()
+        container.register(PlacesServiceProtocol.self) { _ in
+            return PlacesService()
+        }
+
+        // MARK: - ViewModels
+
+        container.register(PlaceListViewModelProtocol.self) { (_, placesService: PlacesServiceProtocol) in
+            return PlaceListViewModel(placesService: placesService)
         }
 
         container.register(PlaceDetailsViewModelProtocol.self) { (_, inputModel: RootInputModelProtocol) in
@@ -47,7 +53,8 @@ class DependencyInjection {
     // MARK: - ViewModel Resolvers
 
     private func resolvePlaceListViewModel() -> PlaceListViewModelProtocol {
-        let viewModel = container.resolve(PlaceListViewModelProtocol.self)!
+        let placesService = container.resolve(PlacesServiceProtocol.self)!
+        let viewModel = container.resolve(PlaceListViewModelProtocol.self, argument: placesService)!
 
         return viewModel
     }

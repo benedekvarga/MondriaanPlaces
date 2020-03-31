@@ -19,7 +19,7 @@ class SectionHeaderView: UICollectionReusableView {
 
     private lazy var titleLabel = UILabel().then {
         $0.translatesAutoresizingMaskIntoConstraints = false
-        $0.font = .objektivMk2Regular(ofSize: 18)
+        $0.font = .rubikRegular(ofSize: 18)
         $0.textColor = .mdcYellow
         $0.textAlignment = .left
     }

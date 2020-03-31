@@ -11,17 +11,80 @@ import RxSwift
 class PlaceListViewModel: RootViewModel, PlaceListViewModelProtocol {
     // MARK: - PlaceListViewModelProtocol properties
 
-    var places = BehaviorSubject<[[PlaceListItemViewModelProtocol]]>(value: [])
     var sectionHeaders = [SectionHeaderViewModelProtocol]()
 
+    let placeholderText = "No place found. Please reload."
+    let places = BehaviorSubject<[[PlaceListItemViewModelProtocol]]>(value: [])
+
+    lazy var onReload: (() -> Void) = { [weak self] in
+        self?.downloadPlaces()
+    }
+
     // MARK: - Properties
+
+    private let placesService: PlacesServiceProtocol
+    private let placesList = BehaviorSubject<[Place]>(value: [])
+
+    // MARK: - Initialization
+
+    init(placesService: PlacesServiceProtocol) {
+        self.placesService = placesService
+
+        super.init()
+    }
 
     // MARK: - PlaceListViewModelProtocol functions
 
     override func initializeViewModel() {
         super.initializeViewModel()
 
-        populateDummyData()
+        placesList
+            .map { place in
+                let placesByCity = Set(place.map { $0.city }).map { item in
+                    return place.filter { $0.city == item }
+                }
+
+                self.sectionHeaders = placesByCity.map { places in
+                    let inputModel = SectionHeaderInputModel(title: places.first?.city ?? "", onTap: {
+                        debugLog(places.map { $0.name })
+                    })
+
+                    return SectionHeaderViewModel(inputView: inputModel)
+                }
+
+                return placesByCity.map { places in
+                    return places.map { place in
+                        let inputView = PlaceListItemInputModel(
+                            title: place.name,
+                            subtitle: place.address,
+                            description: place.description,
+                            imageUrl: place.imageUrl,
+                            itemSelected: {
+                                debugLog(place)
+                            }
+                        )
+
+                        return PlaceListItemViewModel(inputView: inputView)
+                    }
+                }
+            }
+            .bind(to: places)
+            .disposed(by: disposeBag)
+    }
+
+    override func loadData() {
+        super.loadData()
+
+        downloadPlaces()
+    }
+
+    private func downloadPlaces() {
+        placesService.download()
+            .asObservable()
+            .subscribe(onNext: { [weak self] places in
+                self?.placesList.onNext(places)
+            })
+            .disposed(by: disposeBag)
     }
 }
 
@@ -33,7 +96,7 @@ extension PlaceListViewModel {
             title: "Budapest",
             subtitle: "Petőfi utca 11.",
             description: "A Lorem Ipsum egy egyszerû szövegrészlete, szövegutánzata a betûszedõ és nyomdaiparnak. A Lorem Ipsum az 1500-as évek.",
-            image: #imageLiteral(resourceName: "photoPlacehoder"),
+            imageUrl: "",
             itemSelected: { debugLog("Budapest") }
         )
 

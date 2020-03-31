@@ -9,8 +9,29 @@
 import UIKit
 import RxCocoa
 import RxDataSources
+import RxSwift
 
 class PlaceListViewController: RootViewController, PlaceListViewControllerProtocol {
+    // MARK: - Types
+
+    private struct PrivateConstants {
+        private static let screenWidth = UIScreen.main.bounds.width
+        private static let cellWidth: CGFloat = (PrivateConstants.screenWidth / 2) - (PrivateConstants.leftPadding) - (PrivateConstants.rightPadding)
+        private static let topPadding: CGFloat = 0
+        private static let leftPadding: CGFloat = 4
+        private static let bottomPadding: CGFloat = 8
+        private static let rightPadding: CGFloat = 4
+
+        static let cellSize: CGSize = CGSize(width: PrivateConstants.cellWidth, height: PrivateConstants.cellWidth)
+        static let cellEdgeInsets = UIEdgeInsets(
+            top: PrivateConstants.topPadding,
+            left: PrivateConstants.leftPadding,
+            bottom: PrivateConstants.bottomPadding,
+            right: PrivateConstants.rightPadding)
+        static let minimumLineSpacing = PrivateConstants.bottomPadding
+        static let sectionHeaderSize = CGSize(width: PrivateConstants.screenWidth, height: 56)
+    }
+
     // MARK: - Typealiases
 
     typealias PlacesSection = AnimatableSectionModel<String, PlaceListItemViewModel>
@@ -41,26 +62,6 @@ class PlaceListViewController: RootViewController, PlaceListViewControllerProtoc
 
             return header
         })
-
-    // MARK: - Type
-
-    private struct PrivateConstants {
-        private static let screenWidth = UIScreen.main.bounds.width
-        private static let cellWidth: CGFloat = (PrivateConstants.screenWidth / 2) - (PrivateConstants.leftPadding) - (PrivateConstants.rightPadding)
-        private static let topPadding: CGFloat = 0
-        private static let leftPadding: CGFloat = 4
-        private static let bottomPadding: CGFloat = 8
-        private static let rightPadding: CGFloat = 4
-
-        static let cellSize: CGSize = CGSize(width: PrivateConstants.cellWidth, height: PrivateConstants.cellWidth)
-        static let cellEdgeInsets = UIEdgeInsets(
-            top: PrivateConstants.topPadding,
-            left: PrivateConstants.leftPadding,
-            bottom: PrivateConstants.bottomPadding,
-            right: PrivateConstants.rightPadding)
-        static let minimumLineSpacing = PrivateConstants.bottomPadding
-        static let sectionHeaderSize = CGSize(width: PrivateConstants.screenWidth, height: 56)
-    }
 
     // MARK: - Properties
 
@@ -95,11 +96,21 @@ class PlaceListViewController: RootViewController, PlaceListViewControllerProtoc
         )
     }
 
+    private lazy var placeholderLabel = UILabel().then {
+        $0.translatesAutoresizingMaskIntoConstraints = false
+        $0.font = .rubikBold(ofSize: 22)
+        $0.textColor = .mdcPurple
+        $0.textAlignment = .center
+        $0.numberOfLines = 0
+        $0.isHidden = true
+    }
+
     // MARK: - RootViewController functions
 
     override func createView() -> UIView {
         let view = UIView()
 
+        view.addSubview(placeholderLabel)
         view.addSubview(placeListCollectionView)
 
         return view
@@ -127,9 +138,21 @@ class PlaceListViewController: RootViewController, PlaceListViewControllerProtoc
     override func setupViewConstraints() {
         super.setupViewConstraints()
 
+        placeholderLabel.snp.makeConstraints {
+            $0.left.equalToSuperview().offset(64)
+            $0.right.equalToSuperview().offset(-64)
+            $0.centerY.equalToSuperview().offset(-64)
+        }
+
         placeListCollectionView.snp.makeConstraints {
             $0.edges.equalToSuperview()
         }
+    }
+
+    override func setupView() {
+        super.setupView()
+
+        placeholderLabel.text = viewModel.placeholderText
     }
 
     override func bindViewModel() {
@@ -138,8 +161,8 @@ class PlaceListViewController: RootViewController, PlaceListViewControllerProtoc
         // MARK: - ViewController
 
         refreshButton.rx.tap
-            .subscribe(onNext: { _ in
-                // handle button tap
+            .subscribe(onNext: { [weak self] _ in
+                self?.viewModel.onReload()
             })
         .disposed(by: disposeBag)
 
@@ -164,6 +187,18 @@ class PlaceListViewController: RootViewController, PlaceListViewControllerProtoc
                 return places
             }
             .bind(to: placeListCollectionView.rx.items(dataSource: dataSource))
+            .disposed(by: disposeBag)
+
+        viewModel.places
+            .skip(1)
+            .map { $0.isEmpty }
+            .observeOn(MainScheduler.instance)
+            .subscribe(onNext: { [weak self] isEmpty in
+                guard let self = self else { return }
+
+                self.placeListCollectionView.isHidden = isEmpty
+                self.placeholderLabel.isHidden = !isEmpty
+            })
             .disposed(by: disposeBag)
     }
 }

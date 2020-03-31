@@ -6,12 +6,13 @@
 //  Copyright © 2020. Benedek Varga. All rights reserved.
 //
 
+import RxSwift
 import UIKit
 
 protocol PlaceListItemInputModelProtocol: RootInputModelProtocol {
     var title: String { get }
     var subtitle: String { get }
     var description: String { get }
-    var image: UIImage { get }
+    var imageUrl: String { get }
     var itemSelected: (() -> Void) { get }
 }

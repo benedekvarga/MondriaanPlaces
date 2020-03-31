@@ -19,26 +19,21 @@ struct Place {
     let longitude: Double
 
     private var _image: UIImage?
+
+    init(name: String, city: String, address: String, imageUrl: String, description: String, latitude: Double, longitude: Double) {
+        self.name = name
+        self.city = city
+        self.address = address
+        self.imageUrl = imageUrl
+        self.description = description
+        self.latitude = latitude
+        self.longitude = longitude
+        self._image = nil
+    }
 }
 
 extension Place {
     var coordinates: CLLocationCoordinate2D {
         return CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
-    }
-
-    var image: UIImage {
-        if let unwrappedImage = _image {
-            return unwrappedImage
-        }
-
-        guard
-            let url = URL(string: imageUrl),
-            let data = try? Data(contentsOf: url),
-            let downloadedImage = UIImage(data: data)
-        else {
-            return #imageLiteral(resourceName: "photoPlacehoder")
-        }
-
-        return downloadedImage
     }
 }

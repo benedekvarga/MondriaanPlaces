@@ -11,4 +11,5 @@ protocol RootViewModelProtocol {
     var disposeBag: DisposeBag { get }
 
     func initializeViewModel()
+    func loadData()
 }

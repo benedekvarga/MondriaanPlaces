@@ -11,11 +11,27 @@ import UIKit
 extension UIFont {
     // MARK: - Objektiv Mk2
 
-    class func objektivMk2Bold(ofSize size: CGFloat) -> UIFont {
-        return UIFont(name: "ObjektivMk2W03-Bold", size: size)!
+    class func rubikBold(ofSize size: CGFloat) -> UIFont {
+        return UIFont(name: "Rubik-Bold", size: size)!
     }
 
-    class func objektivMk2Regular(ofSize size: CGFloat) -> UIFont {
-        return UIFont(name: "ObjektivMk2W03-Regular", size: size)!
+    class func rubikItalic(ofSize size: CGFloat) -> UIFont {
+        return UIFont(name: "Rubik-Italic", size: size)!
+    }
+
+    class func rubikRegular(ofSize size: CGFloat) -> UIFont {
+        return UIFont(name: "Rubik-Regular", size: size)!
+    }
+
+    class var rubikBold: UIFont {
+        return UIFont(name: "Rubik-Bold", size: 10)!
+    }
+
+    class var rubikItalic: UIFont {
+        return UIFont(name: "Rubik-Italic", size: 10)!
+    }
+
+    class var rubikRegular: UIFont {
+        return UIFont(name: "Rubik-Regular", size: 10)!
     }
 }

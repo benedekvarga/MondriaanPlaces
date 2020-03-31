@@ -12,6 +12,6 @@ struct PlaceListItemInputModel: PlaceListItemInputModelProtocol {
     let title: String
     let subtitle: String
     let description: String
-    let image: UIImage
+    let imageUrl: String
     let itemSelected: (() -> Void)
 }

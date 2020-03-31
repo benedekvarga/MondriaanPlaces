@@ -6,6 +6,7 @@
 //  Copyright © 2020. Benedek Varga. All rights reserved.
 //
 
+import RxSwift
 import UIKit
 
 class PlaceListItemCollectionViewCell: RootCollectionViewCell {
@@ -21,7 +22,7 @@ class PlaceListItemCollectionViewCell: RootCollectionViewCell {
     private lazy var titleLabel = UILabel().then {
         $0.translatesAutoresizingMaskIntoConstraints = false
         $0.textColor = .mdcPurple
-        $0.font = .objektivMk2Bold(ofSize: 14)
+        $0.font = .rubikBold(ofSize: 14)
         $0.textAlignment = .left
         $0.numberOfLines = 1
     }
@@ -29,15 +30,13 @@ class PlaceListItemCollectionViewCell: RootCollectionViewCell {
     private lazy var subtitleLabel = UILabel().then {
         $0.translatesAutoresizingMaskIntoConstraints = false
         $0.textColor = .mdcGray
-        $0.font = .objektivMk2Regular(ofSize: 10)
+        $0.font = .rubikRegular(ofSize: 10)
         $0.textAlignment = .left
-        $0.numberOfLines = 1
+        $0.numberOfLines = 0
     }
 
     private lazy var descriptionTextView = UITextView().then {
         $0.translatesAutoresizingMaskIntoConstraints = false
-        $0.textColor = .mdcDarkGray
-        $0.font = .objektivMk2Regular(ofSize: 11)
         $0.textAlignment = .left
         $0.isScrollEnabled = false
         $0.backgroundColor = .clear
@@ -101,7 +100,10 @@ class PlaceListItemCollectionViewCell: RootCollectionViewCell {
 
         titleLabel.text = viewModel.title.uppercased()
         subtitleLabel.text = viewModel.subtitle
-        descriptionTextView.text = viewModel.description
-        imageView.image = viewModel.image
+        descriptionTextView.attributedText = viewModel.description.htmlAttributed(font: .rubikRegular, size: 8, color: .mdcDarkGray)
+
+        viewModel.image
+            .bind(to: imageView.rx.image)
+            .disposed(by: disposeBag)
     }
 }

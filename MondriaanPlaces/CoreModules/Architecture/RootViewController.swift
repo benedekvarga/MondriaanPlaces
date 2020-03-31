@@ -45,6 +45,12 @@ class RootViewController: UIViewController, RootViewControllerProtocol {
         view.setNeedsUpdateConstraints()
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+
+        rootViewModel.loadData()
+    }
+
     override func updateViewConstraints() {
         super.updateViewConstraints()
 

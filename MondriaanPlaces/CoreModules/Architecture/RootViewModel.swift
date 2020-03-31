@@ -17,6 +17,7 @@ public class RootViewModel: RootViewModelProtocol {
     public init(inputView: RootInputModelProtocol) {
         initializeViewModel()
     }
+
     public init() {
         initializeViewModel()
     }
@@ -24,4 +25,6 @@ public class RootViewModel: RootViewModelProtocol {
     // MARK: - RootViewModelProtocol functions
 
     func initializeViewModel() { }
+
+    func loadData() { }
 }
