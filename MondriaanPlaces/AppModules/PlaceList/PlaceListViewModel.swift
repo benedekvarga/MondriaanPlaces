@@ -13,7 +13,7 @@ class PlaceListViewModel: RootViewModel, PlaceListViewModelProtocol {
 
     var sectionHeaders = [SectionHeaderViewModelProtocol]()
 
-    let placeholderText = "No place found. Please reload."
+    let placeholderText = "reloadText".localized
     let places = BehaviorSubject<[[PlaceListItemViewModelProtocol]]>(value: [])
 
     lazy var onReload: (() -> Void) = { [weak self] in

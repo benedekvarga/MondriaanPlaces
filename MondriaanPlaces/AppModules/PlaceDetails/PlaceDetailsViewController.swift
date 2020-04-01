@@ -16,6 +16,13 @@ class PlaceDetailsViewController: RootViewController, PlaceDetailsViewController
         $0.translatesAutoresizingMaskIntoConstraints = false
     }
 
+    private lazy var backButton = UIBarButtonItem(image: #imageLiteral(resourceName: "back"), style: .plain, target: nil, action: nil).then {
+        $0.tintColor = .mdcYellow
+        $0.onTap { [weak self] in
+            self?.navigationController?.popViewController(animated: true)
+        }
+    }
+
     // MARK: - PlaceDetailsViewControllerProtocol properties
 
     var viewModel: PlaceDetailsViewModelProtocol {
@@ -38,8 +45,9 @@ class PlaceDetailsViewController: RootViewController, PlaceDetailsViewController
         title = viewModel.title
 
         // Navigation Bar
+        navigationItem.leftBarButtonItem = backButton
 
-        self.navigationController?.navigationBar.titleTextAttributes = [
+        navigationController?.navigationBar.titleTextAttributes = [
             NSAttributedString.Key.foregroundColor: UIColor.mdcPurple,
             NSAttributedString.Key.font: UIFont.rubikBold(ofSize: 22)
         ]
