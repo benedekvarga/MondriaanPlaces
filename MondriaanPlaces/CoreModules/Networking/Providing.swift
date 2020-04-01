@@ -39,8 +39,8 @@ extension Providing where Self: TargetType {
         let networkActivityPlugin = NetworkActivityPlugin(networkActivityClosure: networkActivityClosure)
         plugins.append(networkActivityPlugin)
 
-        let networkLoggerPlugin = NetworkLoggerPlugin()
-        plugins.append(networkLoggerPlugin)
+//        let networkLoggerPlugin = NetworkLoggerPlugin()
+//        plugins.append(networkLoggerPlugin)
 
         return MoyaProvider<Self>(callbackQueue: DispatchQueue.global(qos: .utility), plugins: plugins)
     }

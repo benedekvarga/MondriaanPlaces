@@ -9,7 +9,7 @@
 import CoreLocation
 import UIKit
 
-struct Place {
+struct Place: Decodable {
     let name: String
     let city: String
     let address: String
@@ -26,6 +26,33 @@ struct Place {
         self.description = description
         self.latitude = latitude
         self.longitude = longitude
+    }
+
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        self.name = try container.decode(String.self, forKey: .name)
+        self.city = try container.decode(String.self, forKey: .city)
+        self.address = try container.decode(String.self, forKey: .address)
+        self.imageUrl = try container.decode(String.self, forKey: .imageUrl)
+        self.description = try container.decode(String.self, forKey: .description)
+
+        let coordinatesContainer = try container.nestedContainer(keyedBy: CoordinatesKeys.self, forKey: .coordinates)
+        self.latitude = try coordinatesContainer.decode(Double.self, forKey: .latitude)
+        self.longitude = try coordinatesContainer.decode(Double.self, forKey: .longitude)
+    }
+
+    private enum CodingKeys: String, CodingKey {
+        case name
+        case city
+        case address
+        case imageUrl = "image"
+        case description
+        case coordinates
+    }
+
+    private enum CoordinatesKeys: String, CodingKey {
+        case latitude
+        case longitude
     }
 }
 

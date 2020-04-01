@@ -26,7 +26,6 @@
 		0D2E640A242FB5AD0070205C /* PlaceListViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2E6409242FB5AD0070205C /* PlaceListViewControllerProtocol.swift */; };
 		0D2E640C242FB60C0070205C /* PlaceDetailsViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2E640B242FB60C0070205C /* PlaceDetailsViewControllerProtocol.swift */; };
 		0D311831242F657E00D81FC7 /* AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D311830242F657E00D81FC7 /* AppColors.swift */; };
-		0D31183D242F663100D81FC7 /* PrimitiveSequence+Exts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D311833242F663100D81FC7 /* PrimitiveSequence+Exts.swift */; };
 		0D31183F242F663100D81FC7 /* Reachability+Exts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D311835242F663100D81FC7 /* Reachability+Exts.swift */; };
 		0D311840242F663100D81FC7 /* String+Exts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D311836242F663100D81FC7 /* String+Exts.swift */; };
 		0D311841242F663100D81FC7 /* CAGradientLayer+Exts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D311837242F663100D81FC7 /* CAGradientLayer+Exts.swift */; };
@@ -101,7 +100,6 @@
 		0D2E6409242FB5AD0070205C /* PlaceListViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceListViewControllerProtocol.swift; sourceTree = "<group>"; };
 		0D2E640B242FB60C0070205C /* PlaceDetailsViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceDetailsViewControllerProtocol.swift; sourceTree = "<group>"; };
 		0D311830242F657E00D81FC7 /* AppColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColors.swift; sourceTree = "<group>"; };
-		0D311833242F663100D81FC7 /* PrimitiveSequence+Exts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PrimitiveSequence+Exts.swift"; sourceTree = "<group>"; };
 		0D311835242F663100D81FC7 /* Reachability+Exts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Reachability+Exts.swift"; sourceTree = "<group>"; };
 		0D311836242F663100D81FC7 /* String+Exts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Exts.swift"; sourceTree = "<group>"; };
 		0D311837242F663100D81FC7 /* CAGradientLayer+Exts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CAGradientLayer+Exts.swift"; sourceTree = "<group>"; };
@@ -290,7 +288,6 @@
 				0D311839242F663100D81FC7 /* Double+Exts.swift */,
 				0D311838242F663100D81FC7 /* Int+Exts.swift */,
 				0D31183C242F663100D81FC7 /* NumberFormatter+Exts.swift */,
-				0D311833242F663100D81FC7 /* PrimitiveSequence+Exts.swift */,
 				0D311835242F663100D81FC7 /* Reachability+Exts.swift */,
 				0D311836242F663100D81FC7 /* String+Exts.swift */,
 				0D31183A242F663100D81FC7 /* UIColor+Exts.swift */,
@@ -733,7 +730,6 @@
 				0D3AC2C22430ED5F00853AD8 /* SectionHeaderInputModelProtocol.swift in Sources */,
 				0D311843242F663100D81FC7 /* Double+Exts.swift in Sources */,
 				0D2E640C242FB60C0070205C /* PlaceDetailsViewControllerProtocol.swift in Sources */,
-				0D31183D242F663100D81FC7 /* PrimitiveSequence+Exts.swift in Sources */,
 				0D2E6401242FB1140070205C /* PlaceDetailsViewController.swift in Sources */,
 				0DE8B802242F53C6008B9C4C /* AppDelegate.swift in Sources */,
 				0D8C0FB82433CBB900C3F8A1 /* PlaceDetailsInputModel.swift in Sources */,

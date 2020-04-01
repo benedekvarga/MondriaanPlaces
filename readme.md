@@ -38,7 +38,6 @@ All of the schemes have different bundle identifiers, thus they are installed as
 - [RxSwift and RxCocoa](https://github.com/ReactiveX/RxSwift): supporting reactive programming
 - [RxDataSources](https://github.com/RxSwiftCommunity/RxDataSources): bind data to `UITableView` and `UICollectionView`
 - [SnapKit](https://github.com/SnapKit/SnapKit): Auto Layout constraints with ease and less typing
-- [SwiftyJSON](https://github.com/SwiftyJSON/SwiftyJSON): JSON handling
 - [Swinject](https://github.com/Swinject/Swinject): dependecy injection
 - [Then](https://github.com/devxoul/Then): syntactic sugar for initialization with less typing
 

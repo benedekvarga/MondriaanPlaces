@@ -14,7 +14,6 @@ target 'MondriaanPlaces' do
   pod 'RxCocoa', '~> 5.1.1'
   pod 'RxDataSources', '~> 4.0.1'
   pod 'SnapKit', '~> 5.0.1'
-  pod 'SwiftyJSON', '~> 5.0.0'
   pod 'Swinject', '~> 2.7.1'
   pod 'Then', '~> 2.6.0'
 
