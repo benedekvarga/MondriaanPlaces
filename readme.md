@@ -1,26 +1,33 @@
 # Mondriaan Places
 
 ## Schemes
-- **MondriaanPlaces**: developer, with System language (default is English)
-- **MDC Helyek**: production, with forced Hungarian language
-- **MDC POIs**: production, with forced English language
+- **MondriaanPlaces**
+  - developer, with system language (default is English)
+  - `xcodebuild -workspace MondriaanPlaces.xcworkspace -scheme MondriaanPlaces`
+- **MDC Helyek**
+  - production, with forced Hungarian language
+  - `xcodebuild -workspace MondriaanPlaces.xcworkspace -scheme MDC\ helyek`
+- **MDC POIs**
+  - production, with forced English language
+  - `xcodebuild -workspace MondriaanPlaces.xcworkspace -scheme MDC\ POIs`
    
 All of the schemes have different bundle identifiers, thus they are installed as separate apps. Minimum deployment target is iOS 12.0.
 
-## Architecture
-- **MVVM with RXSwift** backed by protocols and dependency injection
+## Architecture and Design
+- **MVVM with RXSwift** backed by protocols and dependency injection.
 - _ViewModel_ is completely indepentent from the _View_, it does not have a weak reference for the `viewController`.
 - All types of views have _ViewModel_, not just the `viewController`s.
 - Input can be given to the _ViewModel_ by _InputModel_ if necessary to avoid long list of init arguments.
-- _Protocols_ are used everywhere possible to enforce encapsulation, replacebility and testability.
+- _Protocols_ are used every possible place to enforce encapsulation, replacebility and testability.
 - _Swinject_ is used for dependency injection, objects are registered and resolved from `MdcContainer` singleton.
+- Unit tests validates viewModels' business logic.
 
 ## Project Structure
 - **Main**: `AppDelegate` and `SceneDelegate`
 - **AppModules**:
   - **Groups of features**: PlaceList, PlaceDetails
-  - **MondriaanPlacesCore**: Entities, services, app specific extensions, services...
-- **CoreModules**: Collection of extensions, services, classes and structs which can be used independently from MondriaanPlaces.
+  - **MondriaanPlacesCore**: Entities, services, app specific extensions...
+- **CoreModules**: Collection of extensions, services, utility tools which can be used independently from MondriaanPlaces.
 - **Resources**: Fonts, images, localized strings.
 
 ## 3rd Party 
@@ -31,6 +38,7 @@ All of the schemes have different bundle identifiers, thus they are installed as
 - [RxSwift and RxCocoa](https://github.com/ReactiveX/RxSwift): supporting reactive programming
 - [RxDataSources](https://github.com/RxSwiftCommunity/RxDataSources): bind data to `UITableView` and `UICollectionView`
 - [SnapKit](https://github.com/SnapKit/SnapKit): Auto Layout constraints with ease and less typing
+- [SwiftyJSON](https://github.com/SwiftyJSON/SwiftyJSON): JSON handling
 - [Swinject](https://github.com/Swinject/Swinject): dependecy injection
 - [Then](https://github.com/devxoul/Then): syntactic sugar for initialization with less typing
 
