@@ -60,9 +60,11 @@ class PlaceListViewModel: RootViewModel, PlaceListViewModelProtocol {
     // MARK: - Functions
 
     private func splitByCities(places: [Place]) -> [[Place]] {
-        let splitPlaces = Set(places.map { $0.city }).map { item in
+        var splitPlaces = Set(places.map { $0.city }).map { item in
             return places.filter { $0.city == item }
         }
+
+        splitPlaces = splitPlaces.sorted(by: { $0.first?.city ?? "" <  $1.first?.city ?? ""})
 
         return splitPlaces
     }

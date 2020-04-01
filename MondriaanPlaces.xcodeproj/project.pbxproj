@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0D05F682242FF6B30059EA52 /* RootCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D05F681242FF6B30059EA52 /* RootCollectionViewCell.swift */; };
 		0D05F68A243009B80059EA52 /* Localized.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0D05F68C243009B80059EA52 /* Localized.strings */; };
+		0D109DA62434D7C5006F24BA /* MockPlacesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D109DA52434D7C5006F24BA /* MockPlacesService.swift */; };
 		0D13FE8A2433E858001EE87F /* CLLocationCoordinate2D+Exts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D13FE892433E858001EE87F /* CLLocationCoordinate2D+Exts.swift */; };
 		0D2E63ED242FA9200070205C /* AppFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2E63EC242FA9200070205C /* AppFonts.swift */; };
 		0D2E63F1242FAB820070205C /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2E63F0242FAB820070205C /* Place.swift */; };
@@ -66,6 +67,7 @@
 		0DE8B80E242F53C7008B9C4C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DE8B80C242F53C7008B9C4C /* LaunchScreen.storyboard */; };
 		0DE8B819242F53C8008B9C4C /* MondriaanPlacesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE8B818242F53C8008B9C4C /* MondriaanPlacesTests.swift */; };
 		681D7A35FF6676F13BF19841 /* Pods_MondriaanPlaces.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BA78AB64381B296EAFFE1B8 /* Pods_MondriaanPlaces.framework */; };
+		700A2F2AEDB8B44685E5117B /* Pods_MondriaanPlaces_MondriaanPlacesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92AF7E9D31D3C4D2ED44523A /* Pods_MondriaanPlaces_MondriaanPlacesTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +84,7 @@
 		0D05F681242FF6B30059EA52 /* RootCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootCollectionViewCell.swift; sourceTree = "<group>"; };
 		0D05F68B243009B80059EA52 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localized.strings; sourceTree = "<group>"; };
 		0D05F68D243009BB0059EA52 /* hu */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hu; path = hu.lproj/Localized.strings; sourceTree = "<group>"; };
+		0D109DA52434D7C5006F24BA /* MockPlacesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPlacesService.swift; sourceTree = "<group>"; };
 		0D13FE892433E858001EE87F /* CLLocationCoordinate2D+Exts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CLLocationCoordinate2D+Exts.swift"; sourceTree = "<group>"; };
 		0D2E63EC242FA9200070205C /* AppFonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFonts.swift; sourceTree = "<group>"; };
 		0D2E63F0242FAB820070205C /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
@@ -145,8 +148,12 @@
 		0DE8B81A242F53C8008B9C4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5C9582ED666BF8F626A9D5A4 /* Pods-MondriaanPlaces.dev.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MondriaanPlaces.dev.xcconfig"; path = "Target Support Files/Pods-MondriaanPlaces/Pods-MondriaanPlaces.dev.xcconfig"; sourceTree = "<group>"; };
 		6BA78AB64381B296EAFFE1B8 /* Pods_MondriaanPlaces.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MondriaanPlaces.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D925FDBF22D2397DF932BA6 /* Pods-MondriaanPlaces-MondriaanPlacesTests.hungarian.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MondriaanPlaces-MondriaanPlacesTests.hungarian.xcconfig"; path = "Target Support Files/Pods-MondriaanPlaces-MondriaanPlacesTests/Pods-MondriaanPlaces-MondriaanPlacesTests.hungarian.xcconfig"; sourceTree = "<group>"; };
+		92AF7E9D31D3C4D2ED44523A /* Pods_MondriaanPlaces_MondriaanPlacesTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MondriaanPlaces_MondriaanPlacesTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		92D39E38E772220A0058831B /* Pods-MondriaanPlaces.hungarian.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MondriaanPlaces.hungarian.xcconfig"; path = "Target Support Files/Pods-MondriaanPlaces/Pods-MondriaanPlaces.hungarian.xcconfig"; sourceTree = "<group>"; };
+		BB985D39DA668A47B761EE19 /* Pods-MondriaanPlaces-MondriaanPlacesTests.dev.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MondriaanPlaces-MondriaanPlacesTests.dev.xcconfig"; path = "Target Support Files/Pods-MondriaanPlaces-MondriaanPlacesTests/Pods-MondriaanPlaces-MondriaanPlacesTests.dev.xcconfig"; sourceTree = "<group>"; };
 		C4D791D2E254A302536E40C7 /* Pods-MondriaanPlaces.english.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MondriaanPlaces.english.xcconfig"; path = "Target Support Files/Pods-MondriaanPlaces/Pods-MondriaanPlaces.english.xcconfig"; sourceTree = "<group>"; };
+		CAB59FBCD2354D44F271CF36 /* Pods-MondriaanPlaces-MondriaanPlacesTests.english.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MondriaanPlaces-MondriaanPlacesTests.english.xcconfig"; path = "Target Support Files/Pods-MondriaanPlaces-MondriaanPlacesTests/Pods-MondriaanPlaces-MondriaanPlacesTests.english.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +169,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				700A2F2AEDB8B44685E5117B /* Pods_MondriaanPlaces_MondriaanPlacesTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -174,6 +182,14 @@
 				0D05F68C243009B80059EA52 /* Localized.strings */,
 			);
 			path = Strings;
+			sourceTree = "<group>";
+		};
+		0D109DA42434D7A9006F24BA /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				0D109DA52434D7C5006F24BA /* MockPlacesService.swift */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 		0D13FE882433E842001EE87F /* Extensions */ = {
@@ -379,6 +395,7 @@
 		0DE8B817242F53C8008B9C4C /* MondriaanPlacesTests */ = {
 			isa = PBXGroup;
 			children = (
+				0D109DA42434D7A9006F24BA /* Mocks */,
 				0DE8B818242F53C8008B9C4C /* MondriaanPlacesTests.swift */,
 				0DE8B81A242F53C8008B9C4C /* Info.plist */,
 			);
@@ -442,6 +459,7 @@
 			isa = PBXGroup;
 			children = (
 				6BA78AB64381B296EAFFE1B8 /* Pods_MondriaanPlaces.framework */,
+				92AF7E9D31D3C4D2ED44523A /* Pods_MondriaanPlaces_MondriaanPlacesTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -452,6 +470,9 @@
 				5C9582ED666BF8F626A9D5A4 /* Pods-MondriaanPlaces.dev.xcconfig */,
 				C4D791D2E254A302536E40C7 /* Pods-MondriaanPlaces.english.xcconfig */,
 				92D39E38E772220A0058831B /* Pods-MondriaanPlaces.hungarian.xcconfig */,
+				BB985D39DA668A47B761EE19 /* Pods-MondriaanPlaces-MondriaanPlacesTests.dev.xcconfig */,
+				CAB59FBCD2354D44F271CF36 /* Pods-MondriaanPlaces-MondriaanPlacesTests.english.xcconfig */,
+				7D925FDBF22D2397DF932BA6 /* Pods-MondriaanPlaces-MondriaanPlacesTests.hungarian.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -484,9 +505,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0DE8B820242F53C8008B9C4C /* Build configuration list for PBXNativeTarget "MondriaanPlacesTests" */;
 			buildPhases = (
+				4A3A9D255725CFD02867B39B /* [CP] Check Pods Manifest.lock */,
 				0DE8B810242F53C8008B9C4C /* Sources */,
 				0DE8B811242F53C8008B9C4C /* Frameworks */,
 				0DE8B812242F53C8008B9C4C /* Resources */,
+				6F94E7DFDB586BBDACBCE222 /* [CP] Embed Pods Frameworks */,
+				49C88EEF43D8B491A1B4392E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -578,6 +602,62 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+		49C88EEF43D8B491A1B4392E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MondriaanPlaces-MondriaanPlacesTests/Pods-MondriaanPlaces-MondriaanPlacesTests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MondriaanPlaces-MondriaanPlacesTests/Pods-MondriaanPlaces-MondriaanPlacesTests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MondriaanPlaces-MondriaanPlacesTests/Pods-MondriaanPlaces-MondriaanPlacesTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4A3A9D255725CFD02867B39B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MondriaanPlaces-MondriaanPlacesTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6F94E7DFDB586BBDACBCE222 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MondriaanPlaces-MondriaanPlacesTests/Pods-MondriaanPlaces-MondriaanPlacesTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MondriaanPlaces-MondriaanPlacesTests/Pods-MondriaanPlaces-MondriaanPlacesTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MondriaanPlaces-MondriaanPlacesTests/Pods-MondriaanPlaces-MondriaanPlacesTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
 		7DF77C841EF7611E8056D7EA /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -701,6 +781,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0DE8B819242F53C8008B9C4C /* MondriaanPlacesTests.swift in Sources */,
+				0D109DA62434D7C5006F24BA /* MockPlacesService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -813,6 +894,7 @@
 		};
 		0DAD0CCC242F5FD7001F76D3 /* Hungarian */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7D925FDBF22D2397DF932BA6 /* Pods-MondriaanPlaces-MondriaanPlacesTests.hungarian.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -991,6 +1073,7 @@
 		};
 		0DE8B821242F53C8008B9C4C /* Dev */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BB985D39DA668A47B761EE19 /* Pods-MondriaanPlaces-MondriaanPlacesTests.dev.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1013,6 +1096,7 @@
 		};
 		0DE8B822242F53C8008B9C4C /* English */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CAB59FBCD2354D44F271CF36 /* Pods-MondriaanPlaces-MondriaanPlacesTests.english.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";

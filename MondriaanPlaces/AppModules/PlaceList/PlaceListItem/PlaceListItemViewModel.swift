@@ -47,7 +47,6 @@ class PlaceListItemViewModel: RootViewModel, PlaceListItemViewModelProtocol {
                 let data = try? Data(contentsOf: url),
                 let downloadedImage = UIImage(data: data)
             else {
-                errorLog("Cannot get image from URL:", urlString)
                 return
             }
             DispatchQueue.main.async { [weak self] in

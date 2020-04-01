@@ -17,4 +17,8 @@ target 'MondriaanPlaces' do
   pod 'SwiftyJSON', '~> 5.0.0'
   pod 'Swinject', '~> 2.7.1'
   pod 'Then', '~> 2.6.0'
+
+  target 'MondriaanPlacesTests' do
+    pod 'Swinject', '~> 2.7.1'
+  end
 end
