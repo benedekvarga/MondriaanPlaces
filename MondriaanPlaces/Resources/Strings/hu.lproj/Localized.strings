@@ -8,3 +8,4 @@
 
 "mondriaanLogo" = "mondriaanLogo-hu";
 "reloadText" = "Nincs megjeleníthető hely. Kérlek frissíts!";
+"isOfflineText" = "A hálózat nem elérhető. Kérlek csatlakozz újra.";

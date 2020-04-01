@@ -8,3 +8,4 @@
 
 "mondriaanLogo" = "mondriaanLogo-en";
 "reloadText" = "No place found. Please reload.";
+"isOfflineText" = "Connection is offline. Please reconnect.";

@@ -6,6 +6,7 @@
 //  Copyright © 2020. Benedek Varga. All rights reserved.
 //
 
+import Reachability
 import RxSwift
 
 class PlaceListViewModel: RootViewModel, PlaceListViewModelProtocol {
@@ -13,7 +14,8 @@ class PlaceListViewModel: RootViewModel, PlaceListViewModelProtocol {
 
     var sectionHeaders = [SectionHeaderViewModelProtocol]()
 
-    let placeholderText = "reloadText".localized
+    let isOffline = BehaviorSubject<Bool> (value: false)
+    let placeholderText = BehaviorSubject<String>(value: "reloadText".localized)
     let places = BehaviorSubject<[[PlaceListItemViewModelProtocol]]>(value: [])
 
     lazy var onReload: (() -> Void) = { [weak self] in
@@ -48,6 +50,20 @@ class PlaceListViewModel: RootViewModel, PlaceListViewModelProtocol {
                 return self.createPlaceListItemViewModels(from: placesByCity)
             }
             .bind(to: places)
+            .disposed(by: disposeBag)
+
+        Reachability.rx.isReachable
+            .map { !$0 }
+            .do(onNext: { [weak self] isOffline in
+                guard let self = self else { return }
+
+                if isOffline {
+                    self.placeholderText.onNext("isOfflineText".localized)
+                } else {
+                    self.placeholderText.onNext("reloadText".localized)
+                }
+            })
+            .bind(to: isOffline)
             .disposed(by: disposeBag)
     }
 

@@ -157,12 +157,6 @@ class PlaceListViewController: RootViewController, PlaceListViewControllerProtoc
         }
     }
 
-    override func setupView() {
-        super.setupView()
-
-        placeholderLabel.text = viewModel.placeholderText
-    }
-
     override func bindViewModel() {
         super.bindViewModel()
 
@@ -184,6 +178,10 @@ class PlaceListViewController: RootViewController, PlaceListViewControllerProtoc
 
         // MARK: - ViewModel
 
+        viewModel.placeholderText
+            .bind(to: placeholderLabel.rx.text)
+            .disposed(by: disposeBag)
+
         viewModel.places
             .map { items in
                 var places: [PlacesSection] = []
@@ -199,8 +197,10 @@ class PlaceListViewController: RootViewController, PlaceListViewControllerProtoc
             .bind(to: placeListCollectionView.rx.items(dataSource: dataSource))
             .disposed(by: disposeBag)
 
-        viewModel.places
-            .map { $0.isEmpty }
+        Observable.combineLatest(
+                viewModel.places.map { $0.isEmpty },
+                viewModel.isOffline
+            ) { $0 || $1 }
             .observeOn(MainScheduler.instance)
             .subscribe(onNext: { [weak self] isEmpty in
                 guard let self = self else { return }
