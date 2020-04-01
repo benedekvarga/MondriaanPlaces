@@ -18,8 +18,6 @@ struct Place {
     let latitude: Double
     let longitude: Double
 
-    private var _image: UIImage?
-
     init(name: String, city: String, address: String, imageUrl: String, description: String, latitude: Double, longitude: Double) {
         self.name = name
         self.city = city
@@ -28,7 +26,6 @@ struct Place {
         self.description = description
         self.latitude = latitude
         self.longitude = longitude
-        self._image = nil
     }
 }
 

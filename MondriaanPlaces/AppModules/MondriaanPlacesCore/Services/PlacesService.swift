@@ -18,7 +18,7 @@ protocol PlacesServiceProtocol {
 struct PlacesService: PlacesServiceProtocol {
     private let provider: RxProvider<MdcAPI>
 
-    init(provider: RxProvider<MdcAPI> = RxProvider()) {
+    init(provider: RxProvider<MdcAPI>) {
         self.provider = provider
     }
 

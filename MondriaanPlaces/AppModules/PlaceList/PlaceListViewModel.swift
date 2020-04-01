@@ -39,39 +39,13 @@ class PlaceListViewModel: RootViewModel, PlaceListViewModelProtocol {
         super.initializeViewModel()
 
         placesList
-            .map { place in
-                let placesByCity = Set(place.map { $0.city }).map { item in
-                    return place.filter { $0.city == item }
-                }
+            .map { [weak self] places in
+                guard let self = self else { return [[]] }
 
-                self.sectionHeaders = placesByCity.map { places in
-                    let inputModel = SectionHeaderInputModel(title: places.first?.city ?? "", itemSelected: {
-                        return PlaceDetailsInputModel(
-                            title: places.first?.city ?? "",
-                            pins: places.map { PinModel(name: $0.name, city: $0.city, coordinates: $0.coordinates) })
-                    })
+                let placesByCity = self.splitByCities(places: places)
+                self.sectionHeaders = self.createSectionHeaderViewModels(from: placesByCity)
 
-                    return SectionHeaderViewModel(inputView: inputModel)
-                }
-
-                return placesByCity.map { places in
-                    return places.map { place in
-                        let inputView = PlaceListItemInputModel(
-                            title: place.name,
-                            subtitle: place.address,
-                            description: place.description,
-                            imageUrl: place.imageUrl,
-                            itemSelected: {
-                                return PlaceDetailsInputModel(
-                                    title: place.name,
-                                    pins: [PinModel(name: place.name, city: place.city, coordinates: place.coordinates)]
-                                )
-                            }
-                        )
-
-                        return PlaceListItemViewModel(inputView: inputView)
-                    }
-                }
+                return self.createPlaceListItemViewModels(from: placesByCity)
             }
             .bind(to: places)
             .disposed(by: disposeBag)
@@ -81,6 +55,53 @@ class PlaceListViewModel: RootViewModel, PlaceListViewModelProtocol {
         super.loadData()
 
         downloadPlaces()
+    }
+
+    // MARK: - Functions
+
+    private func splitByCities(places: [Place]) -> [[Place]] {
+        let splitPlaces = Set(places.map { $0.city }).map { item in
+            return places.filter { $0.city == item }
+        }
+
+        return splitPlaces
+    }
+
+    private func createSectionHeaderViewModels(from placesByCity: [[Place]]) -> [SectionHeaderViewModelProtocol] {
+        let viewModels: [SectionHeaderViewModelProtocol] = placesByCity.map { places in
+            let inputModel = SectionHeaderInputModel(title: places.first?.city ?? "", itemSelected: {
+                return PlaceDetailsInputModel(
+                    title: places.first?.city ?? "",
+                    pins: places.map { PinModel(name: $0.name, city: $0.city, coordinates: $0.coordinates) })
+            })
+
+            return SectionHeaderViewModel(inputView: inputModel)
+        }
+
+        return viewModels
+    }
+
+    private func createPlaceListItemViewModels(from placesByCity: [[Place]]) -> [[PlaceListItemViewModelProtocol]] {
+        let viewModel: [[PlaceListItemViewModelProtocol]] = placesByCity.map { places in
+            return places.map { place in
+                let inputView = PlaceListItemInputModel(
+                    title: place.name,
+                    subtitle: place.address,
+                    description: place.description,
+                    imageUrl: place.imageUrl,
+                    itemSelected: {
+                        return PlaceDetailsInputModel(
+                            title: place.name,
+                            pins: [PinModel(name: place.name, city: place.city, coordinates: place.coordinates)]
+                        )
+                    }
+                )
+
+                return PlaceListItemViewModel(inputView: inputView)
+            }
+        }
+
+        return viewModel
     }
 
     private func downloadPlaces() {

@@ -50,8 +50,8 @@ class PlaceListItemViewModel: RootViewModel, PlaceListItemViewModelProtocol {
                 errorLog("Cannot get image from URL:", urlString)
                 return
             }
-            DispatchQueue.main.async {
-                self.image.onNext(downloadedImage)
+            DispatchQueue.main.async { [weak self] in
+                self?.image.onNext(downloadedImage)
             }
         }
     }

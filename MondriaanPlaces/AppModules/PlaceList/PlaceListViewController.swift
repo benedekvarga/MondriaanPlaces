@@ -48,8 +48,8 @@ class PlaceListViewController: RootViewController, PlaceListViewControllerProtoc
             cell.viewModel = viewModel
             return cell
         },
-        configureSupplementaryView: { _, collectionView, kind, indexPath in
-            guard let header = collectionView.dequeueReusableSupplementaryView(
+        configureSupplementaryView: { [weak self] _, collectionView, kind, indexPath in
+            guard let self = self, let header = collectionView.dequeueReusableSupplementaryView(
                 ofKind: kind,
                 withReuseIdentifier: SectionHeaderView.reuseIdentifier,
                 for: indexPath) as? SectionHeaderView
@@ -60,10 +60,10 @@ class PlaceListViewController: RootViewController, PlaceListViewControllerProtoc
             let headerViewModel = self.viewModel.sectionHeaders[indexPath.section]
             header.viewModel = headerViewModel
 
-            header.addTapGesture(handler: { _ in
+            header.addTapGesture(handler: { [weak self] _ in
                 let inputModel = headerViewModel.itemSelected()
-                let viewController = DependencyInjection.shared.resolveDetailsListViewController(with: inputModel).viewController
-                self.navigationController?.pushViewController(viewController, animated: true)
+                let viewController = MDCContainer.shared.resolveDetailsListViewController(with: inputModel).viewController
+                self?.navigationController?.pushViewController(viewController, animated: true)
             })
 
             return header
@@ -175,10 +175,10 @@ class PlaceListViewController: RootViewController, PlaceListViewControllerProtoc
         .disposed(by: disposeBag)
 
         placeListCollectionView.rx.modelSelected(PlaceListItemViewModel.self)
-            .subscribe(onNext: { item in
+            .subscribe(onNext: { [weak self] item in
                 let inputModel = item.itemSelected()
-                let viewController = DependencyInjection.shared.resolveDetailsListViewController(with: inputModel).viewController
-                self.navigationController?.pushViewController(viewController, animated: true)
+                let viewController = MDCContainer.shared.resolveDetailsListViewController(with: inputModel).viewController
+                self?.navigationController?.pushViewController(viewController, animated: true)
             })
             .disposed(by: disposeBag)
 
@@ -200,7 +200,6 @@ class PlaceListViewController: RootViewController, PlaceListViewControllerProtoc
             .disposed(by: disposeBag)
 
         viewModel.places
-            .skip(1)
             .map { $0.isEmpty }
             .observeOn(MainScheduler.instance)
             .subscribe(onNext: { [weak self] isEmpty in

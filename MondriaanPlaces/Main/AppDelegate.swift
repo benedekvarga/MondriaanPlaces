@@ -21,13 +21,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         // MARK: - Dependency Injection
 
-        DependencyInjection.shared.registerModules()
+        MDCContainer.shared.registerModules()
 
         // MARK: - Display first screen
 
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()
-        let viewController = DependencyInjection.shared.resolvePlaceListViewController().viewController
+        let viewController = MDCContainer.shared.resolvePlaceListViewController().viewController
         let navigationController = UINavigationController(rootViewController: viewController)
         window?.rootViewController = navigationController
 

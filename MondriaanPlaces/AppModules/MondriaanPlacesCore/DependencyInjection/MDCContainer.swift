@@ -1,5 +1,5 @@
 //
-//  DependencyInjection.swift
+//  MDCContainer.swift
 //  MondriaanPlaces
 //
 //  Created by Benedek Varga on 2020. 03. 28..
@@ -8,10 +8,10 @@
 
 import Swinject
 
-class DependencyInjection {
+class MDCContainer {
     // MARK: - Properties
 
-    static let shared = DependencyInjection()
+    static let shared = MDCContainer()
     private let container: Container
 
     // MARK: - Initialization
@@ -23,10 +23,18 @@ class DependencyInjection {
     // MARK: - Functions
 
     func registerModules() {
+        // MARK: - Providers
+
+        container.register(RxProvider<MdcAPI>.self) { _ in
+            let provider: RxProvider<MdcAPI> = RxProvider()
+
+            return provider
+        }
+
         // MARK: - Services
 
-        container.register(PlacesServiceProtocol.self) { _ in
-            return PlacesService()
+        container.register(PlacesServiceProtocol.self) { (_, provider: RxProvider<MdcAPI>) in
+            return PlacesService(provider: provider)
         }
 
         // MARK: - ViewModels
@@ -50,16 +58,25 @@ class DependencyInjection {
         }
     }
 
+    // MARK: - Service Resolvers
+
+    func resolvePlacesService() -> PlacesServiceProtocol {
+        let provider = container.resolve(RxProvider<MdcAPI>.self)!
+        let placesService = container.resolve(PlacesServiceProtocol.self, argument: provider)!
+
+        return placesService
+    }
+
     // MARK: - ViewModel Resolvers
 
-    private func resolvePlaceListViewModel() -> PlaceListViewModelProtocol {
-        let placesService = container.resolve(PlacesServiceProtocol.self)!
+    func resolvePlaceListViewModel() -> PlaceListViewModelProtocol {
+        let placesService = resolvePlacesService()
         let viewModel = container.resolve(PlaceListViewModelProtocol.self, argument: placesService)!
 
         return viewModel
     }
 
-    private func resolvePlaceDetailsViewModel(inputModel: PlaceDetailsInputModelProtocol) -> PlaceDetailsViewModelProtocol {
+    func resolvePlaceDetailsViewModel(inputModel: PlaceDetailsInputModelProtocol) -> PlaceDetailsViewModelProtocol {
         let viewModel = container.resolve(PlaceDetailsViewModelProtocol.self, argument: inputModel)!
 
         return viewModel
