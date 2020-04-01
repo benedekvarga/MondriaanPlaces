@@ -54,7 +54,6 @@
 		0D6A14D62433756D0088BF19 /* Providing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6A14D52433756D0088BF19 /* Providing.swift */; };
 		0D6A14DA243376E20088BF19 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6A14D9243376E20088BF19 /* NetworkError.swift */; };
 		0D6A14DC2433770A0088BF19 /* RxProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6A14DB2433770A0088BF19 /* RxProvider.swift */; };
-		0D6A14DE2433775B0088BF19 /* ServerKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6A14DD2433775B0088BF19 /* ServerKey.swift */; };
 		0D8C0FA72433C10900C3F8A1 /* Rubik-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0D8C0FA42433C10900C3F8A1 /* Rubik-Bold.ttf */; };
 		0D8C0FA82433C10900C3F8A1 /* Rubik-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0D8C0FA52433C10900C3F8A1 /* Rubik-Italic.ttf */; };
 		0D8C0FA92433C10900C3F8A1 /* Rubik-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0D8C0FA62433C10900C3F8A1 /* Rubik-Regular.ttf */; };
@@ -128,7 +127,6 @@
 		0D6A14D52433756D0088BF19 /* Providing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Providing.swift; sourceTree = "<group>"; };
 		0D6A14D9243376E20088BF19 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		0D6A14DB2433770A0088BF19 /* RxProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxProvider.swift; sourceTree = "<group>"; };
-		0D6A14DD2433775B0088BF19 /* ServerKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerKey.swift; sourceTree = "<group>"; };
 		0D8C0FA42433C10900C3F8A1 /* Rubik-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Bold.ttf"; sourceTree = "<group>"; };
 		0D8C0FA52433C10900C3F8A1 /* Rubik-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Italic.ttf"; sourceTree = "<group>"; };
 		0D8C0FA62433C10900C3F8A1 /* Rubik-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Regular.ttf"; sourceTree = "<group>"; };
@@ -334,7 +332,6 @@
 			isa = PBXGroup;
 			children = (
 				0D6A14D02433747E0088BF19 /* MdcAPI.swift */,
-				0D6A14DD2433775B0088BF19 /* ServerKey.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -355,6 +352,14 @@
 				0D6A14D2243375180088BF19 /* PlacesService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		0D9AB2DD2435185C0004027B /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				0DE8B818242F53C8008B9C4C /* MondriaanPlacesTests.swift */,
+			);
+			path = Tests;
 			sourceTree = "<group>";
 		};
 		0DE8B7F5242F53C6008B9C4C = {
@@ -393,7 +398,7 @@
 			isa = PBXGroup;
 			children = (
 				0D109DA42434D7A9006F24BA /* Mocks */,
-				0DE8B818242F53C8008B9C4C /* MondriaanPlacesTests.swift */,
+				0D9AB2DD2435185C0004027B /* Tests */,
 				0DE8B81A242F53C8008B9C4C /* Info.plist */,
 			);
 			path = MondriaanPlacesTests;
@@ -722,7 +727,6 @@
 				0D2E63F3242FAE1A0070205C /* PlaceListViewController.swift in Sources */,
 				0D2E63F1242FAB820070205C /* Place.swift in Sources */,
 				0D3AC2C42430ED8900853AD8 /* SectionHeaderInputModel.swift in Sources */,
-				0D6A14DE2433775B0088BF19 /* ServerKey.swift in Sources */,
 				0D311846242F663100D81FC7 /* NumberFormatter+Exts.swift in Sources */,
 				0D311844242F663100D81FC7 /* UIColor+Exts.swift in Sources */,
 				0D3AC2B62430C13300853AD8 /* SectionHeaderViewModelProtocol.swift in Sources */,

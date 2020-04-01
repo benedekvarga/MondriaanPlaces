@@ -39,7 +39,5 @@ struct MockPlacesService: PlacesServiceProtocol {
         ]
 
         return .just(places)
-    }
-
-    
+    }    
 }
