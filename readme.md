@@ -3,13 +3,10 @@
 ## Schemes
 - **MondriaanPlaces**
   - developer, with system language (default is English)
-  - `xcodebuild -workspace MondriaanPlaces.xcworkspace -scheme MondriaanPlaces`
 - **MDC Helyek**
   - production, with forced Hungarian language
-  - `xcodebuild -workspace MondriaanPlaces.xcworkspace -scheme MDC\ helyek`
 - **MDC POIs**
   - production, with forced English language
-  - `xcodebuild -workspace MondriaanPlaces.xcworkspace -scheme MDC\ POIs`
    
 All of the schemes have different bundle identifiers, thus they are installed as separate apps. Minimum deployment target is iOS 12.0.
 
